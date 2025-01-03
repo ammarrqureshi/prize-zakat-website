@@ -13,7 +13,7 @@ export default function Header() {
   }, [setMenu]);
 
   return (
-    <header className="mx-auto max-w-full px-4 lg:max-w-7xl">
+    <header className="mx-auto max-w-full  px-4 lg:max-w-7xl">
       <div className="flex items-center justify-between">
         <div className="w-28">
           <Image width={100} height={100} src={Logo} className="logo-style-1" />
@@ -42,7 +42,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/resources">
+              <Link href="/#resources">
                 <p className="px-9 text-accent-1 hover:text-gray-600 lg:text-gray-800">Resources</p>
               </Link>
             </li>
@@ -52,7 +52,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/contact">
                 <p className="mx-3 rounded-md border border-gray-900 px-5 py-1 text-accent-1 hover:bg-gray-900 hover:text-white lg:text-gray-800">
                   Contact
                 </p>

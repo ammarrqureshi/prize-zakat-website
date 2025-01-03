@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
+import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-
-import Header from 'components/Header';
+import Tabs from 'components/Tabs';
 import Testimonials from 'components/Testimonials';
 
 import DecorHero from 'assets/images/decor-intersect-1.svg';
@@ -15,7 +14,7 @@ import FacebookIco from 'assets/images/facebook.svg';
 import InstagramIco from 'assets/images/instagram.svg';
 import TwitterIco from 'assets/images/twitter.svg';
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   const Clients = [
     { image: 'client-1.png', alt: 'axon' },
     { image: 'client-2.png', alt: 'jet start' },
@@ -23,16 +22,12 @@ const Home: NextPage = () => {
     { image: 'client-4.png', alt: 'qantas' },
     { image: 'client-5.png', alt: 'alitalia' },
   ];
-  return (
-<>
-      {/* Header */}
-      <div className="absolute z-20 w-full py-6 lg:z-10 lg:py-12">
-        <Header />
-      </div>
- 
-</>
 
+  return (
+    <>
+      <Tabs />
+    </>
   );
 };
 
-export default Home;
+export default About;

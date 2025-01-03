@@ -3,9 +3,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from 'assets/images/logo.png';
-import Header from 'components/Header';
 import Testimonials from 'components/Testimonials';
 
+import Header from 'components/Header';
 import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
 import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
@@ -60,21 +60,21 @@ const Home: NextPage = () => {
   const resources = [
     {
       title: 'Building a Sustainable Future',
-      thumbnail: '/images/destination-1.jpg',
+      thumbnail: '/images/resource-thumbnail-1.jpg',
       icon: '/images/resource-1.png',
-      link: 'https://sta.theinfluencers.com.pk/building-a-sustainable-future/',
+      link: 'https://youtu.be/7kVOghAPfWw?si=HOlBgAZB1HnS-m3X',
     },
     {
       title: 'The Dangers of Interest (Riba)',
-      thumbnail: '/images/destination-1.jpg',
+      thumbnail: '/images/resource-thumbnail-2.jpg',
       icon: '/images/resource-2.png',
-      link: 'https://sta.theinfluencers.com.pk/the-dangers-of-interest-riba/',
+      link: 'https://youtu.be/KB7j1um5dE8?si=To20RzvJUpmIyfVh',
     },
     {
       title: 'The Power of Zakat',
-      thumbnail: '/images/destination-1.jpg',
+      thumbnail: '/images/resource-thumbnail-3.jpg',
       icon: '/images/resource-3.png',
-      link: 'https://sta.theinfluencers.com.pk/the-power-of-zakat/',
+      link: 'https://youtu.be/1fjhIw6KxZQ?si=l7l0GWZF6ewmUIpb',
     },
   ];
 
@@ -165,7 +165,7 @@ const Home: NextPage = () => {
                         <Image width={60} height={60} src={service.icon} alt="satellite" />
                       </div>
                       <div>
-                        <h4 className="mb-3 text-xl font-semibold text-gray-900">{service.heading}</h4>
+                        <h4 className="mb-3 text-xl font-semibold text-accent-8">{service.heading}</h4>
                         <h5 className="font-regular mb-8 px-0 text-sm text-gray-500 lg:px-8">{service.text}</h5>
                       </div>
                     </div>
@@ -195,7 +195,17 @@ const Home: NextPage = () => {
                 <div className="relative z-20 w-[365px] transition duration-300 hover:scale-110  ">
                   <div className="flex flex-col rounded-3xl bg-white pb-10 shadow-great">
                     <div className="relative h-96 overflow-hidden rounded-tr-3xl rounded-tl-3xl">
-                      <Image layout="fill" className="object-cover object-top" src={resource.thumbnail} alt="Rome" />
+                      <div className=" relative z-[90] flex h-full w-full items-center justify-center bg-gray-900/50 ">
+                        <span className="mr-6 inline-flex items-center justify-center rounded-full bg-white  p-4 text-black shadow-accent-2/30">
+                          <span className="material-icons">play_arrow</span>
+                        </span>
+                      </div>
+                      <Image
+                        className="cover absolute z-10 h-full w-full object-cover "
+                        layout="fill"
+                        src={resource.thumbnail}
+                        alt="video_thumbnail"
+                      />
                     </div>
                     <div className="text-gray-500">
                       <div className="flex justify-between gap-4 px-5 pt-7">
@@ -231,13 +241,14 @@ const Home: NextPage = () => {
       </section>
       <VolunteerSection />
       {/* Section Easy in Fast */}
-      <div className="mb-28">
+      <div className="relative mb-28 bg-accent-8  py-16 text-white">
+        <div className="absolute -top-0 right-0  z-10 h-60 w-60 rounded-full bg-accent-1/60 blur-3xl"></div>
         <div className="relative mx-auto max-w-7xl overflow-hidden px-4">
           <div className="flex flex-wrap space-x-4 space-y-4 lg:space-y-0 lg:space-x-0">
             <div className="w-full pl-0 lg:w-6/12 lg:pl-6">
               <div className="mb-3 flex flex-col text-left lg:mb-8">
-                <h3 className="mb-2 text-lg uppercase text-gray-500">Shaping the Future </h3>
-                <h3 className="mb-4 font-serif text-4xl uppercase leading-tight text-gray-900 lg:text-5xl lg:leading-snug">
+                <h3 className="mb-2 text-lg uppercase text-gray-200">Shaping the Future </h3>
+                <h3 className="mb-4 font-serif text-4xl uppercase leading-tight  lg:text-5xl lg:leading-snug">
                   Doing the right thing at right time
                 </h3>
               </div>
@@ -247,7 +258,7 @@ const Home: NextPage = () => {
                     <span className="material-icons text-white">co_present</span>
                   </span>
                   <div className="flex flex-col leading-5">
-                    <h6 className=" text-xl font-bold text-gray-900">50+ Seminars</h6>
+                    <h6 className=" text-xl font-bold ">50+ Seminars</h6>
                   </div>
                 </li>
                 <li className="flex items-center gap-x-5">
@@ -255,7 +266,7 @@ const Home: NextPage = () => {
                     <span className="material-icons text-white">hail</span>
                   </span>
                   <div className="flex flex-col leading-5">
-                    <h6 className=" text-xl font-bold text-gray-900">30+ Interviews</h6>
+                    <h6 className=" text-xl font-bold ">30+ Interviews</h6>
                   </div>
                 </li>
                 <li className="flex items-center gap-x-5">
@@ -263,14 +274,13 @@ const Home: NextPage = () => {
                     <span className="material-icons text-white">diversity_3</span>
                   </span>
                   <div className="flex flex-col leading-5">
-                    <h6 className=" text-xl font-bold text-gray-900">100000+ Audience Reach</h6>
+                    <h6 className=" text-xl font-bold ">100000+ Audience Reach</h6>
                   </div>
                 </li>
               </ul>
             </div>
             <div className="flex w-full items-center justify-center lg:w-6/12">
               <div className="relative w-[370px]">
-                <div className="absolute -top-10 -right-10 z-10 h-60 w-60 rounded-full bg-accent-4/60 blur-3xl"></div>
                 {/* <div className="absolute bottom-16 -right-1 z-30 w-[263px] translate-x-0 transform rounded-2xl bg-white p-4 pr-7 shadow-great lg:right-0 lg:translate-x-1/2"> */}
                 {/*   <div className="flex"> */}
                 {/*     <span className="mr-3 h-12 w-12 flex-none overflow-hidden rounded-full"> */}
