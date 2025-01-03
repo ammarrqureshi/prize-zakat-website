@@ -15,9 +15,12 @@ export default function Header() {
   return (
     <header className="mx-auto max-w-full  px-4 lg:max-w-7xl">
       <div className="flex items-center justify-between">
+<Link href="/">
+
         <div className="w-28">
           <Image width={100} height={100} src={Logo} className="logo-style-1" />
         </div>
+</Link>
         <button
           type="button"
           onClick={toggleMenu}

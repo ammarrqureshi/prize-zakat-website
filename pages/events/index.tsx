@@ -31,6 +31,10 @@ const Events: NextPage = () => {
   ];
   return (
     <div className="flex flex-col gap-4">
+      <span className="absolute right-0 top-0 bottom-0 h-screen w-5/12 ">
+        <DecorHero className="fill-accent-3/30" />
+      </span>
+      <div className="absolute -left-80 -top-10 -z-10 h-[496px] w-[478px] rounded-full bg-accent-4/30 blur-3xl"></div>
       <h2 className="mb-8 font-serif text-4xl leading-tight tracking-tighter text-gray-900  lg:leading-[89px]">
         Events
       </h2>
