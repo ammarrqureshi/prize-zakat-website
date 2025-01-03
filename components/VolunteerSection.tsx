@@ -19,8 +19,8 @@ export default function VolunteerSection() {
                 <h6 className=" text-lg font-bold leading-normal text-gray-500 lg:text-3xl">
                   Want to become a volunteer in shaping the future with justice and compassion?{' '}
                 </h6>
-                <Link
-                  href="/contact"
+              <Link
+                href="/contact"
                   className="flex items-center justify-between rounded-r-lg bg-accent-2 py-4 px-6 text-white hover:bg-accent-1 lg:rounded-xl"
                 >
                   <span className="mr-6 inline-flex items-center justify-center rounded-full bg-white  p-4 text-accent-2 shadow-accent-2/30">

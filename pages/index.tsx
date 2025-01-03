@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import Logo from 'assets/images/logo.png';
 import Header from 'components/Header';
 import Testimonials from 'components/Testimonials';
 
@@ -161,7 +161,7 @@ const Home: NextPage = () => {
                   <div className="group relative flex h-full w-full flex-col  justify-center rounded-[36px] bg-white py-4 px-6 text-center shadow-none shadow-great transition-all duration-300">
                     <div className="absolute bottom-8 left-8 -z-10 h-28 w-28 -translate-x-1/2 translate-y-1/2 transform rounded-tl-3xl rounded-br-lg bg-accent-3 transition-all duration-300 group-hover:left-6 group-hover:bottom-6 group-hover:-z-10"></div>
                     <div className="flex flex-col items-center justify-center gap-8">
-                      <div className="">
+                      <div className="group-hover:scale-110">
                         <Image width={60} height={60} src={service.icon} alt="satellite" />
                       </div>
                       <div>
@@ -215,7 +215,7 @@ const Home: NextPage = () => {
                         <div>
                           <Link
                             href={resource.link}
-                            className="flex items-center justify-center rounded-full bg-accent-1 p-3 text-white hover:bg-accent-2"
+                            className="flex items-center justify-center rounded-full bg-accent-4 p-3 text-white hover:bg-accent-3"
                           >
                             <span className="material-icons">arrow_forward</span>
                           </Link>
@@ -235,13 +235,13 @@ const Home: NextPage = () => {
         <div className="relative mx-auto max-w-7xl overflow-hidden px-4">
           <div className="flex flex-wrap space-x-4 space-y-4 lg:space-y-0 lg:space-x-0">
             <div className="w-full pl-0 lg:w-6/12 lg:pl-6">
-              <div className="mb-3 flex flex-col text-left lg:mb-16">
+              <div className="mb-3 flex flex-col text-left lg:mb-8">
                 <h3 className="mb-2 text-lg uppercase text-gray-500">Shaping the Future </h3>
-                <h3 className="mb-8 font-serif text-4xl uppercase leading-tight text-gray-900 lg:text-5xl lg:leading-snug">
+                <h3 className="mb-4 font-serif text-4xl uppercase leading-tight text-gray-900 lg:text-5xl lg:leading-snug">
                   Doing the right thing at right time
                 </h3>
               </div>
-              <ul className="flex flex-col gap-y-8 lg:gap-y-12">
+              <ul className="flex flex-col gap-y-6 lg:gap-y-6">
                 <li className="flex items-center gap-x-5">
                   <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-accent-1">
                     <span className="material-icons text-white">co_present</span>
@@ -270,59 +270,59 @@ const Home: NextPage = () => {
             </div>
             <div className="flex w-full items-center justify-center lg:w-6/12">
               <div className="relative w-[370px]">
-                <div className="absolute -top-10 -right-10 z-10 h-60 w-60 rounded-full bg-accent-7/40 blur-3xl"></div>
-                <div className="absolute bottom-16 -right-1 z-30 w-[263px] translate-x-0 transform rounded-2xl bg-white p-4 pr-7 shadow-great lg:right-0 lg:translate-x-1/2">
-                  <div className="flex">
-                    <span className="mr-3 h-12 w-12 flex-none overflow-hidden rounded-full">
-                      <Image
-                        src="/images/destination-5.jpg"
-                        layout="responsive"
-                        width="100"
-                        height="100"
-                        alt="city of greece"
-                      />
-                    </span>
-                    <div className="mb-2 flex w-full flex-col">
-                      <span className="text-sm text-gray-500">Ongoing</span>
-                      <span className="mb-2 text-sm text-gray-900">Trip to Rome</span>
-                      <span className="mb-1 text-xs">
-                        <span className="mr-1 text-accent-6">40%</span>
-                        <span className="text-gray-900">Completed</span>
-                      </span>
-                      <span className="flex h-1 w-full rounded-full bg-gray-200">
-                        <span className="h-full w-20 rounded-full bg-accent-6" />
-                      </span>
-                    </div>
+                <div className="absolute -top-10 -right-10 z-10 h-60 w-60 rounded-full bg-accent-4/60 blur-3xl"></div>
+                {/* <div className="absolute bottom-16 -right-1 z-30 w-[263px] translate-x-0 transform rounded-2xl bg-white p-4 pr-7 shadow-great lg:right-0 lg:translate-x-1/2"> */}
+                {/*   <div className="flex"> */}
+                {/*     <span className="mr-3 h-12 w-12 flex-none overflow-hidden rounded-full"> */}
+                {/*       <Image */}
+                {/*         src="/images/metrics-section.jpg" */}
+                {/*         layout="responsive" */}
+                {/*         width="100" */}
+                {/*         height="100" */}
+                {/*         alt="city of greece" */}
+                {/*       /> */}
+                {/*     </span> */}
+                {/*     <div className="mb-2 flex w-full flex-col"> */}
+                {/*       <span className="text-sm text-gray-500">Ongoing</span> */}
+                {/*       <span className="mb-2 text-sm text-gray-900">Trip to Rome</span> */}
+                {/*       <span className="mb-1 text-xs"> */}
+                {/*         <span className="mr-1 text-accent-6">40%</span> */}
+                {/*         <span className="text-gray-900">Completed</span> */}
+                {/*       </span> */}
+                {/*       <span className="flex h-1 w-full rounded-full bg-gray-200"> */}
+                {/*         <span className="h-full w-20 rounded-full bg-accent-6" /> */}
+                {/*       </span> */}
+                {/*     </div> */}
+                {/*   </div> */}
+                {/* </div> */}
+                <div className="relative z-20 rounded-xl bg-white px-4 pt-4 pb-4 shadow-great">
+                  <div className="relative mb-6 h-96 overflow-hidden rounded-3xl">
+                    <Image layout="fill" className="object-cover" src="/images/metric-section.jpg" alt="greece" />
                   </div>
-                </div>
-                <div className="relative z-20 rounded-xl bg-white px-4 pt-4 pb-5 shadow-great">
-                  <div className="relative mb-6 h-40 overflow-hidden rounded-3xl">
-                    <Image layout="fill" className="object-cover" src="/images/destination-4.jpg" alt="greece" />
-                  </div>
-                  <h6 className="mb-2 text-lg font-bold text-gray-900">Trip to Greece</h6>
-                  <div className="mb-4 flex text-gray-500">
-                    <h6>14-29 June</h6>
-                    <span className="mx-2">|</span>
-                    <h6>by Robbin joseph</h6>
-                  </div>
-                  <div className="mb-6 flex gap-x-3">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-300 text-gray-600">
-                      <span className="material-icons text-base">spa</span>
-                    </span>
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-300 text-gray-600">
-                      <span className="material-icons text-base">map</span>
-                    </span>
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-300 text-gray-600">
-                      <span className="material-icons text-base">near_me</span>
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex space-x-3 text-gray-500">
-                      <span className="material-icons text-base">apartment</span>
-                      <span>24 people going</span>
-                    </div>
-                    <span className="material-icons text-2xl text-accent-6">favorite_border</span>
-                  </div>
+                  {/*   <h6 className="mb-2 text-lg font-bold text-gray-900">Trip to Greece</h6> */}
+                  {/*   <div className="mb-4 flex text-gray-500"> */}
+                  {/*     <h6>14-29 June</h6> */}
+                  {/*     <span className="mx-2">|</span> */}
+                  {/*     <h6>by Robbin joseph</h6> */}
+                  {/*   </div> */}
+                  {/*   <div className="mb-6 flex gap-x-3"> */}
+                  {/*     <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-300 text-gray-600"> */}
+                  {/*       <span className="material-icons text-base">spa</span> */}
+                  {/*     </span> */}
+                  {/*     <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-300 text-gray-600"> */}
+                  {/*       <span className="material-icons text-base">map</span> */}
+                  {/*     </span> */}
+                  {/*     <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-300 text-gray-600"> */}
+                  {/*       <span className="material-icons text-base">near_me</span> */}
+                  {/*     </span> */}
+                  {/*   </div> */}
+                  {/*   <div className="flex items-center justify-between"> */}
+                  {/*     <div className="flex space-x-3 text-gray-500"> */}
+                  {/*       <span className="material-icons text-base">apartment</span> */}
+                  {/*       <span>24 people going</span> */}
+                  {/*     </div> */}
+                  {/*     <span className="material-icons text-2xl text-accent-6">favorite_border</span> */}
+                  {/*   </div> */}
                 </div>
               </div>
             </div>
@@ -357,9 +357,15 @@ const Home: NextPage = () => {
         <div className="h-6- bg-accent-6.20 absolute -bottom-0 -right-10 z-10 w-60 rounded-full blur-3xl"></div>
         <div className="relative mx-auto max-w-full px-4 lg:max-w-7xl">
           <div className="mb-12 flex flex-wrap">
-            <div className="w-full lg:w-3/12 lg:px-4">
-              <h6 className="mb03 mb-4 text-5xl tracking-tight text-gray-900">Jadoo.</h6>
-              <p className="pr-8 text-sm text-gray-500">Book your trip in minute, get full Control for much longer.</p>
+            <div className="w-full lg:w-3/12 lg:px-4 ">
+              <div className="w-28">
+                <Image width={100} height={100} src={Logo} className="logo-style-1" />
+              </div>
+              <br></br>
+              <p className="pr-8 text-sm text-gray-500">
+                The Policy Research Institute for Zakat Economy (PRIZE) is dedicated to promote and establish a
+                Zakat-based, Riba-free economic system as a sustainable alternative
+              </p>
             </div>
             <div className="w-full lg:w-6/12">
               <div className="grid grid-cols-1 gap-y-4 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-4">
@@ -367,59 +373,38 @@ const Home: NextPage = () => {
                   <h6 className="mt-2 mb-6 text-xl font-semibold tracking-tight text-gray-900">Company</h6>
                   <ul className="space-y-2 text-lg text-gray-500">
                     <li>
-                      <Link href="/#">
+                      <Link href="/about">
                         <p>About</p>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#">
-                        <p>Careers</p>
+                      <Link href="#resources">
+                        <p>Resources</p>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#">
-                        <p>Mobile</p>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h6 className="mt-2 mb-6 text-xl font-semibold tracking-tight text-gray-900">Contact</h6>
-                  <ul className="space-y-2 text-lg text-gray-500">
-                    <li>
-                      <Link href="/#">
-                        <p>Help</p>
-                      </Link>
-                      /FAQ
-                    </li>
-                    <li>
-                      <Link href="/#">
-                        <p>Press</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/#">
-                        <p>Affiliates</p>
+                      <Link href="/events">
+                        <p>Events</p>
                       </Link>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h6 className="mt-2 mb-6 text-xl font-semibold tracking-tight text-gray-900">More</h6>
+                  <h6 className="mt-2 mb-6 text-xl font-semibold tracking-tight text-gray-900">Recent Updates</h6>
                   <ul className="space-y-2 text-lg text-gray-500">
                     <li>
-                      <Link href="/#">
-                        <p>Airlinefees</p>
+                      <Link href={resources[0].link}>
+                        <p>Building a Sustainable future</p>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#">
-                        <p>Airline</p>
+                      <Link href={resources[1].link}>
+                        <p>The Dangers of Interest</p>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#">
-                        <p>Low fare tips</p>
+                      <Link href={resources[2].link}>
+                        <p>The Power of Zakat</p>
                       </Link>
                     </li>
                   </ul>
@@ -430,7 +415,7 @@ const Home: NextPage = () => {
               <div className="flex space-x-5">
                 <Link href="https://facebook.com" className="cursor-pointer" passHref>
                   <div>
-                    <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white fill-black shadow-xl">
+                    <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-accent-4 fill-black shadow-xl">
                       <span className="bg-gradient-social absolute inset-0 rotate-0 transform opacity-0 transition-all duration-300 group-hover:rotate-[180deg] group-hover:opacity-100"></span>
                       <span className="relative z-20">
                         <FacebookIco className="fill-black group-hover:fill-white" />
@@ -440,7 +425,7 @@ const Home: NextPage = () => {
                 </Link>
                 <Link href="https://instagram.com" className="cursor-pointer" passHref>
                   <div>
-                    <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white fill-black shadow-xl">
+                    <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-accent-4 fill-black shadow-xl">
                       <span className="bg-gradient-social absolute inset-0 rotate-0 transform opacity-0 transition-all duration-300 group-hover:rotate-[180deg] group-hover:opacity-100"></span>
                       <span className="relative z-20">
                         <InstagramIco className="fill-black group-hover:fill-white" />
@@ -450,7 +435,7 @@ const Home: NextPage = () => {
                 </Link>
                 <Link href="https://twitter.com" className="cursor-pointer" passHref>
                   <div target="blank" rel="noreferrer noopener">
-                    <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white fill-black shadow-xl">
+                    <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-accent-4 fill-black shadow-xl">
                       <span className="bg-gradient-social absolute inset-0 rotate-0 transform opacity-0 transition-all duration-300 group-hover:rotate-[180deg] group-hover:opacity-100"></span>
                       <span className="relative z-20">
                         <TwitterIco className="fill-black group-hover:fill-white" />
@@ -458,20 +443,16 @@ const Home: NextPage = () => {
                     </div>
                   </div>
                 </Link>
-              </div>
-              <h6 className="mt-7 text-xl tracking-tight text-gray-500">Discover our app</h6>
-              <div className="mt-4 flex space-x-1">
-                <div className="relative h-[35px] w-[107px]">
-                  <a href="https://play.google.com" target="_blank" className="relative flex h-full w-full">
-                    <Image layout="fill" alt="play store" className="object-contain" src="/images/google-play-1.jpg" />
-                  </a>
-                </div>
-                <div className="relative h-[35px] w-[107px]">
-                  <a href="https://www.apple.com/id/app-store/" target="_blank" className="relative flex h-full w-full">
-                    <Image layout="fill" alt="apps store" className="object-contain" src="/images/apple-1.jpg" />
-                  </a>
-                </div>
-              </div>
+              </div>{' '}
+              <Link
+                href="/contact"
+                className="mt-14 flex w-52 items-center justify-between   rounded-r-lg bg-accent-2 py-4 px-6 text-white hover:bg-accent-1 lg:rounded-xl"
+              >
+                <span className=" inline-flex items-center justify-center rounded-full bg-white  p-4 text-accent-2 shadow-accent-2/30">
+                  <span className="material-icons">call</span>
+                </span>
+                <span className="hidden lg:block">Contact Us</span>
+              </Link>
             </div>
           </div>
           <div className="pt-8 text-center text-sm text-gray-500">All rights reserved@theinfluencers.com.pk</div>
