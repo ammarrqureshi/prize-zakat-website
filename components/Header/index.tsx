@@ -31,53 +31,38 @@ export default function Header() {
           className={classNames('z-20 w-auto lg:flex lg:h-auto lg:opacity-100', {
             'visible fixed inset-0 flex h-screen w-full items-center justify-center bg-black text-white opacity-100':
               menu,
-            'invisible hidden h-0 opacity-0': !menu,
+            'block max-sm:invisible max-sm:hidden max-sm:opacity-0': !menu,
           })}
         >
           <ul className="flex flex-col items-center gap-y-6 lg:flex-row lg:gap-y-0">
             <li>
-              <Link href="/destination">
-                <p className="px-9 text-accent-1 lg:text-gray-800">Destinations</p>
+              <Link href="/about">
+                <p className="px-9 text-accent-1 lg:text-gray-800 hover:text-gray-600">About</p>
               </Link>
             </li>
             <li>
-              <Link href="/hotels">
-                <p className="px-9 text-accent-1 lg:text-gray-800">Hotels</p>
+              <Link href="/resources">
+                <p className="px-9 text-accent-1 lg:text-gray-800 hover:text-gray-600">Resources</p>
               </Link>
             </li>
             <li>
-              <Link href="/flights">
-                <p className="px-9 text-accent-1 lg:text-gray-800">Flights</p>
+              <Link href="/events">
+                <p className="px-9 text-accent-1 lg:text-gray-800 hover:text-gray-600">Events</p>
               </Link>
             </li>
             <li>
-              <Link href="/bookings">
-                <p className="px-9 text-accent-1 lg:text-gray-800">Bookings</p>
-              </Link>
-            </li>
-            <li>
-              <Link href="/destination">
-                <p className="px-9 text-accent-1 lg:text-gray-800">Destinations</p>
-              </Link>
-            </li>
-            <li>
-              <Link href="/login">
-                <p className="px-9  text-accent-1 lg:text-gray-800">Login</p>
-              </Link>
-            </li>
-            <li>
-              <Link href="/sign-up">
-                <p className="mx-3 rounded-md border border-gray-900 px-5 py-1 text-accent-1 lg:text-gray-800">
-                  Sign Up
+             <Link href="/">
+                <p className="mx-3 rounded-md border border-gray-900 px-5 py-1 text-accent-1 lg:text-gray-800 hover:bg-gray-900 hover:text-white">
+                 Contact 
                 </p>
               </Link>
             </li>
-            <li>
-              <button className="relative px-9 text-accent-1 lg:text-gray-800">
-                EN
-                <span className="absolute ml-2 h-2 w-2 translate-y-1/2 rotate-45 transform border-b border-r border-gray-800"></span>
-              </button>
-            </li>
+          {/*   <li> */}
+          {/*     <button className="relative px-9 text-accent-1 lg:text-gray-800"> */}
+          {/*       EN */}
+          {/*       <span className="absolute ml-2 h-2 w-2 translate-y-1/2 rotate-45 transform border-b border-r border-gray-800"></span> */}
+          {/*     </button> */}
+          {/*   </li> */}
           </ul>
         </div>
       </div>

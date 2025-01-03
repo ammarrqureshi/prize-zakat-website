@@ -24,7 +24,14 @@ const Home: NextPage = () => {
     { image: 'client-5.png', alt: 'alitalia' },
   ];
   return (
-<h1>about page</h1>
+<>
+      {/* Header */}
+      <div className="absolute z-20 w-full py-6 lg:z-10 lg:py-12">
+        <Header />
+      </div>
+ 
+</>
+
   );
 };
 

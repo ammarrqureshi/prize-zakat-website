@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Header from 'components/Header';
 import Testimonials from 'components/Testimonials';
 
+import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
 import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
 import DecorPlus1 from 'assets/images/decor-plus-style-1.svg';
@@ -23,6 +24,60 @@ const Home: NextPage = () => {
     { image: 'client-4.png', alt: 'qantas' },
     { image: 'client-5.png', alt: 'alitalia' },
   ];
+  const services = [
+    {
+      heading: 'Compulsory Zakat/Wealth Tax',
+      icon: '/images/zakat.png',
+      text: 'Zakat and wealth tax transfer resources from the rich to the poor , addressing basic needs',
+    },
+    {
+      heading: 'Ushr/Production Tax',
+      icon: '/images/building.png',
+      text: 'Explain Ushr as a form of tax based on agricultural and industrial production',
+    },
+    {
+      heading: 'Full Reserve Debt-Free Banking',
+      icon: '/images/debt.png',
+      text: 'Explain how full reserve banking differs from current fractional reserve banking',
+    },
+    {
+      heading: 'Job guarantee at Basic wage',
+      icon: '/images/worker.png',
+      text: 'Explain how a job guarantee differs from unemployment benefits',
+    },
+    {
+      heading: 'Simplified Single Rate Tax',
+      icon: '/images/pie-chart.png',
+      text: 'Discuss how a simplified corporate tax can promote business transparency and reduce tax evasion',
+    },
+    {
+      heading: 'Zero Foreign Debt',
+      icon: '/images/foreign-debt.png',
+      text: 'Explain the harms of foreign debt and the importance of financial sovereignty',
+    },
+  ];
+
+  const resources = [
+    {
+      title: 'Building a Sustainable Future',
+      thumbnail: '/images/destination-1.jpg',
+      icon: '/images/resource-1.png',
+      link: 'https://sta.theinfluencers.com.pk/building-a-sustainable-future/',
+    },
+    {
+      title: 'The Dangers of Interest (Riba)',
+      thumbnail: '/images/destination-1.jpg',
+      icon: '/images/resource-2.png',
+      link: 'https://sta.theinfluencers.com.pk/the-dangers-of-interest-riba/',
+    },
+    {
+      title: 'The Power of Zakat',
+      thumbnail: '/images/destination-1.jpg',
+      icon: '/images/resource-3.png',
+      link: 'https://sta.theinfluencers.com.pk/the-power-of-zakat/',
+    },
+  ];
+
   return (
     <div>
       <Head>
@@ -47,57 +102,41 @@ const Home: NextPage = () => {
       {/* Section Hero */}
       <section className="relative mb-28">
         <span className="absolute right-0 top-0 bottom-0 h-screen w-5/12 ">
-          <DecorHero className="fill-accent-3" />
+          <DecorHero className="fill-accent-3/30" />
         </span>
-        <div className="absolute -left-80 -top-10 h-[496px] w-[478px] rounded-full bg-accent-4/50 blur-3xl"></div>
+        <div className="absolute -left-80 -top-10 -z-10 h-[496px] w-[478px] rounded-full bg-accent-4/30 blur-3xl"></div>
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex">
             <div className="w-full pt-52 lg:w-6/12">
-              <h1 className="mb-6 text-sm font-bold uppercase text-accent-2 lg:text-xl">
-                Best Destinations around the world
-              </h1>
+              <h1 className="mb-6 text-sm font-bold uppercase text-accent-2 lg:text-xl">Economy that can save you</h1>
               <h2 className="mb-8 font-serif text-4xl leading-tight tracking-tighter text-gray-900 lg:text-[84px] lg:leading-[89px]">
-                Travel,{' '}
+                Zakat,{' '}
                 <span className="relative">
-                  enjoy
+                  economy
                   <span className="absolute top-full left-0 -z-10 -mt-3 -ml-4 lg:-mt-8">
-                    <DecorTextUnderlineHero className="h-1 w-[100px] fill-accent-2 lg:h-[12px] lg:w-[393px]" />
+                    <DecorTextUnderlineHero className="h-1 w-[100px] fill-accent-4 lg:h-[12px] lg:w-[393px]" />
                   </span>
                 </span>
-                and live a new and full life
+                <p>for the society</p>
               </h2>
               <p className="mb-8 max-w-lg text-sm leading-6 text-gray-500 lg:text-base lg:leading-8">
-                Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed
-                listening. Park gate sell they west hard for the.
+                Establishing a society and economy based on Islamic Principles of Justice, Equity and Compassion{' '}
               </p>
               <div className="flex">
                 <Link href="/">
                   <p className="mr-11 rounded-xl bg-accent-1 px-6 py-4 text-white shadow-[0-25-35px]">Find Out More</p>
                 </Link>
-                <button className="flex items-center">
-                  <span className="mr-6 inline-flex items-center justify-center rounded-full bg-accent-2 p-4 text-white shadow-accent-2/30">
-                    <span className="material-icons">play_arrow</span>
+                <Link href="/contact" className="flex items-center">
+                  <span className="mr-6 inline-flex items-center justify-center rounded-full bg-accent-4  p-4 text-white shadow-accent-2/30">
+                    <span className="material-icons">volunteer_activism</span>
                   </span>
-                  <span className="hidden text-gray-500 lg:block">Play Demo</span>
-                </button>
+                  <span className="hidden text-gray-500 lg:block">Become Volunteer</span>
+                </Link>
               </div>
             </div>
-            <div className="relative hidden h-[764px] w-[783px] pt-24 lg:block">
-              <div className="absolute top-44 left-40 z-30 h-[95px] w-[137px]">
-                <Image src="/images/plane.png" layout="responsive" width="100" height="100" alt="plane" />
-              </div>
-              <div className="absolute top-56 right-8 z-10 h-[95px] w-[137px]">
-                <Image src="/images/plane.png" layout="responsive" width="100" height="100" alt="plane" />
-              </div>
-              <div className="relative z-20 -translate-x-16 transform">
-                <Image
-                  src="/images/hero-traveller.png"
-                  priority
-                  layout="responsive"
-                  width="100"
-                  height="100"
-                  alt="traveler"
-                />
+            <div className="jusitfy-center relative hidden h-[764px] w-[783px] items-center pt-24 lg:flex">
+              <div className="relative z-[999]  flex w-full transform items-center justify-center   overflow-hidden">
+                <Image src="/images/hero-image.png" priority width={600} height={600} alt="zakat hero" />
               </div>
             </div>
           </div>
@@ -110,201 +149,121 @@ const Home: NextPage = () => {
             <DecorPlus1 className="decor-plus-style-1" />
           </div>
           <div className="mb-16 flex flex-col text-center">
-            <h3 className="mb-2 text-lg uppercase text-gray-500">Category</h3>
             <h3 className="font-serif text-4xl uppercase leading-tight text-gray-900 lg:text-5xl lg:leading-snug">
-              We Offer Best Services
+              Our Focus
             </h3>
           </div>
-          <div className="flex flex-wrap text-gray-900">
-            <div className="w-full px-8 lg:w-3/12">
-              <div className="group relative flex flex-col items-center justify-center rounded-[36px] bg-white text-center shadow-none transition-all duration-300 hover:shadow-great">
-                <div className="absolute bottom-12 left-12 -z-10 h-28 w-28 -translate-x-1/2 translate-y-1/2 transform rounded-tl-3xl rounded-br-lg bg-accent-2 opacity-0 transition-all duration-300 group-hover:left-6 group-hover:bottom-6 group-hover:opacity-100"></div>
-                <div className="relative mb-6 inline-flex h-28">
-                  <div className="absolute -right-11 z-10 translate-y-1/2 -translate-x-1/2">
-                    <Image
-                      layout="fixed"
-                      width={60}
-                      height={60}
-                      src="/images/illustration-satellite.png"
-                      alt="satellite"
-                    />
+          <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-16 text-gray-900">
+            {/* block 1 */}
+            {services.map((service, idx) => (
+              <div key={idx} className=" h-[350px] w-full min-w-[350px]  px-4  lg:w-3/12">
+                <Link href="#">
+                  <div className="group relative flex h-full w-full flex-col  justify-center rounded-[36px] bg-white py-4 px-6 text-center shadow-none shadow-great transition-all duration-300">
+                    <div className="absolute bottom-8 left-8 -z-10 h-28 w-28 -translate-x-1/2 translate-y-1/2 transform rounded-tl-3xl rounded-br-lg bg-accent-3 transition-all duration-300 group-hover:left-6 group-hover:bottom-6 group-hover:-z-10"></div>
+                    <div className="flex flex-col items-center justify-center gap-8">
+                      <div className="">
+                        <Image width={60} height={60} src={service.icon} alt="satellite" />
+                      </div>
+                      <div>
+                        <h4 className="mb-3 text-xl font-semibold text-gray-900">{service.heading}</h4>
+                        <h5 className="font-regular mb-8 px-0 text-sm text-gray-500 lg:px-8">{service.text}</h5>
+                      </div>
+                    </div>
                   </div>
-                  <div className="absolute bottom-0 left-5 h-12 w-12 -translate-x-1/2 transform rounded-tl-lg rounded-tr-md rounded-br-[18px] rounded-bl-md bg-accent-3"></div>
-                </div>
-                <h4 className="mb-3 text-xl font-semibold text-gray-900">Calculated Weather</h4>
-                <h5 className="mb-8 px-0 text-base font-medium text-gray-500 lg:px-8">
-                  Built Wicket longer admire do barton vanity itself do in it.
-                </h5>
+                </Link>
               </div>
-            </div>
-            <div className="w-full px-8 lg:w-3/12">
-              <div className="group relative flex flex-col items-center justify-center rounded-[36px] bg-white text-center shadow-none transition-all duration-300 hover:shadow-great">
-                <div className="absolute bottom-12 left-12 -z-10 h-28 w-28 -translate-x-1/2 translate-y-1/2 transform rounded-tl-3xl rounded-br-lg bg-accent-2 opacity-0 transition-all duration-300 group-hover:left-6 group-hover:bottom-6 group-hover:opacity-100"></div>
-                <div className="relative mb-6 inline-flex h-28">
-                  <div className="absolute z-10 -translate-x-1/2">
-                    <Image layout="fixed" width={146} height={133} src="/images/plane.png" alt="plane" />
-                  </div>
-                  <div className="absolute bottom-10 -left-3 h-12 w-12 -translate-x-1/2 transform rounded-tl-md rounded-tr-lg rounded-br-md rounded-bl-[18px] bg-accent-3"></div>
-                </div>
-                <h4 className="mb-3 text-xl font-semibold text-gray-900">Best Flights</h4>
-                <h5 className="mb-8 px-0 text-base font-medium text-gray-500 lg:px-8">
-                  Engrossed listening. Park gate sell they west hard for the.
-                </h5>
-              </div>
-            </div>
-            <div className="w-full px-8 lg:w-3/12">
-              <div className="group relative flex flex-col items-center justify-center rounded-[36px] bg-white text-center shadow-none transition-all duration-300 hover:shadow-great">
-                <div className="absolute bottom-12 left-12 -z-10 h-28 w-28 -translate-x-1/2 translate-y-1/2 transform rounded-tl-3xl rounded-br-lg bg-accent-2 opacity-0 transition-all duration-300 group-hover:left-6 group-hover:bottom-6 group-hover:opacity-100"></div>
-                <div className="relative mb-6 inline-flex h-28">
-                  <div className="absolute -left-3 top-2 z-10 translate-y-1/2 -translate-x-1/2">
-                    <Image layout="fixed" width={40} height={69} src="/images/illustration-mic.png" alt="microphone" />
-                  </div>
-                  <div className="absolute bottom-5 left-3 h-12 w-12 -translate-x-1/2 transform rounded-tl-md rounded-tr-[18px] rounded-br-md rounded-bl-lg bg-accent-3"></div>
-                </div>
-                <h4 className="mb-3 text-xl font-semibold text-gray-900">Local Events</h4>
-                <h5 className="mb-8 px-0 text-base font-medium text-gray-500 lg:px-8">
-                  Barton vanity itself do in it. Preferd to men it engrossed listening.
-                </h5>
-              </div>
-            </div>
-            <div className="w-full px-8 lg:w-3/12">
-              <div className="group relative flex flex-col items-center justify-center rounded-[36px] bg-white text-center shadow-none transition-all duration-300 hover:shadow-great">
-                <div className="absolute bottom-12 left-12 -z-10 h-28 w-28 -translate-x-1/2 translate-y-1/2 transform rounded-tl-3xl rounded-br-lg bg-accent-2 opacity-0 transition-all duration-300 group-hover:left-6 group-hover:bottom-6 group-hover:opacity-100"></div>
-                <div className="relative mb-6 inline-flex h-28">
-                  <div className="absolute -right-10 top-3 z-10 translate-y-1/2 -translate-x-1/2">
-                    <Image layout="fixed" width={50} height={50} src="/images/illustration-power.png" alt="gear" />
-                  </div>
-                  <div className="absolute bottom-0 left-5 h-12 w-12 -translate-x-1/2 transform rounded-tl-md rounded-tr-lg rounded-br-md rounded-bl-[18px] bg-accent-3"></div>
-                </div>
-                <h4 className="mb-3 text-xl font-semibold text-gray-900">Customization</h4>
-                <h5 className="mb-8 px-0 text-base font-medium text-gray-500 lg:px-8">
-                  We deliver outsourced aviation services for military customers
-                </h5>
-              </div>
-            </div>
+            ))}
+            {/* block 1 ends */}
           </div>
         </div>
       </section>
       {/* Top Destinations Section */}
-      <section className="mb-28">
+      <section id="resources" className="mb-28">
         <div className="relative mx-auto max-w-7xl px-4">
           <div className="mb-16 flex flex-col text-center">
-            <h3 className="mb-2 text-lg uppercase text-gray-500">Top Selling</h3>
             <h3 className="font-serif text-4xl uppercase leading-tight text-gray-900 lg:text-5xl lg:leading-snug">
-              Top Destinations
+              Resources
             </h3>
           </div>
-          <div className="relative flex flex-wrap space-y-5 pr-0  lg:space-y-0 lg:pr-10">
-            <div className="absolute bottom-10 right-0 h-[252px] w-[96px]">
+          <div className="relative flex flex-wrap gap-14  pr-0   lg:pr-8">
+            <div className="absolute bottom-10 right-0 h-[252px] w-[96px] ">
               <DecorSwirl1 className="stroke-gray-600" />
             </div>
-            <div className="relative z-20 w-full px-4 lg:w-4/12">
-              <div className="flex flex-col rounded-3xl bg-white pb-10 shadow-great">
-                <div className="relative h-96 overflow-hidden rounded-tr-3xl rounded-tl-3xl">
-                  <Image layout="fill" className="object-cover object-top" src="/images/destination-1.jpg" alt="Rome"/>
-                </div>
-                <div className="text-gray-500">
-                  <div className="flex justify-between px-5 pt-7">
-                    <h6 className="text-lg">Rome, Italy</h6>
-                    <h6 className="text-lg">$5,42k</h6>
-                  </div>
-                  <div className="inline-flex items-center px-5 pt-4">
-                    <span className="material-icons mr-2 text-black">near_me</span>
-                    <span>10 Days Trip</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative z-20 w-full px-4 lg:w-4/12">
-              <div className="flex flex-col rounded-3xl bg-white pb-10 shadow-great">
-                <div className="relative h-96 overflow-hidden rounded-tr-3xl rounded-tl-3xl">
-                  <Image
-                    layout="fill"
-                    className="object-cover object-top"
-                    src="/images/destination-2.jpg"
-                    alt="Big Bang"
-                  />
-                </div>
-                <div className="text-gray-500">
-                  <div className="flex justify-between px-5 pt-7">
-                    <h6 className="text-lg">London, UK</h6>
-                    <h6 className="text-lg">$4,2k</h6>
-                  </div>
-                  <div className="inline-flex items-center px-5 pt-4">
-                    <span className="material-icons mr-2 text-black">near_me</span>
-                    <span>12 Days Trip</span>
+            {resources.map((resource) => (
+              <Link href={resource.link}>
+                {' '}
+                <div className="relative z-20 w-[365px] transition duration-300 hover:scale-110  ">
+                  <div className="flex flex-col rounded-3xl bg-white pb-10 shadow-great">
+                    <div className="relative h-96 overflow-hidden rounded-tr-3xl rounded-tl-3xl">
+                      <Image layout="fill" className="object-cover object-top" src={resource.thumbnail} alt="Rome" />
+                    </div>
+                    <div className="text-gray-500">
+                      <div className="flex justify-between gap-4 px-5 pt-7">
+                        <div className="flex items-center  justify-center gap-4">
+                          <div className="flex items-center justify-center ">
+                            <Image
+                              className="min-w-[40px]"
+                              layout="fixed"
+                              width={30}
+                              height={30}
+                              src={resource.icon}
+                              alt="satellite"
+                            />
+                          </div>
+                          <h6 className="text-lg text-black ">{resource.title} </h6>
+                        </div>
+                        <div>
+                          <Link
+                            href={resource.link}
+                            className="flex items-center justify-center rounded-full bg-accent-1 p-3 text-white hover:bg-accent-2"
+                          >
+                            <span className="material-icons">arrow_forward</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="relative z-20 w-full px-4 lg:w-4/12">
-              <div className="flex flex-col rounded-3xl bg-white pb-10 shadow-great">
-                <div className="relative h-96 overflow-hidden rounded-tr-3xl rounded-tl-3xl">
-                  <Image
-                    layout="fill"
-                    className="object-cover object-top"
-                    src="/images/destination-3.jpg"
-                    alt="europe"
-                  />
-                </div>
-                <div className="text-gray-500">
-                  <div className="flex justify-between px-5 pt-7">
-                    <h6 className="text-lg">Full Europe</h6>
-                    <h6 className="text-lg">$15k</h6>
-                  </div>
-                  <div className="inline-flex items-center px-5 pt-4">
-                    <span className="material-icons mr-2 text-black">near_me</span>
-                    <span>28 Days Trip</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
+      <VolunteerSection />
       {/* Section Easy in Fast */}
       <div className="mb-28">
         <div className="relative mx-auto max-w-7xl overflow-hidden px-4">
           <div className="flex flex-wrap space-x-4 space-y-4 lg:space-y-0 lg:space-x-0">
             <div className="w-full pl-0 lg:w-6/12 lg:pl-6">
               <div className="mb-3 flex flex-col text-left lg:mb-16">
-                <h3 className="mb-2 text-lg uppercase text-gray-500">Easy in Fast</h3>
+                <h3 className="mb-2 text-lg uppercase text-gray-500">Shaping the Future </h3>
                 <h3 className="mb-8 font-serif text-4xl uppercase leading-tight text-gray-900 lg:text-5xl lg:leading-snug">
-                  Book your next trip in 3 easy steps
+                  Doing the right thing at right time
                 </h3>
               </div>
               <ul className="flex flex-col gap-y-8 lg:gap-y-12">
                 <li className="flex items-center gap-x-5">
                   <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-accent-1">
-                    <span className="material-icons text-white">navigation</span>
+                    <span className="material-icons text-white">co_present</span>
                   </span>
                   <div className="flex flex-col leading-5">
-                    <h6 className="font-bold text-gray-900">Choose Destination</h6>
-                    <p className="font-thin text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.{' '}
-                    </p>
+                    <h6 className=" text-xl font-bold text-gray-900">50+ Seminars</h6>
                   </div>
                 </li>
                 <li className="flex items-center gap-x-5">
                   <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-accent-2">
-                    <span className="material-icons text-white">credit_card</span>
+                    <span className="material-icons text-white">hail</span>
                   </span>
                   <div className="flex flex-col leading-5">
-                    <h6 className="font-bold text-gray-900">Make Payment</h6>
-                    <p className="font-thin text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.{' '}
-                    </p>
+                    <h6 className=" text-xl font-bold text-gray-900">30+ Interviews</h6>
                   </div>
                 </li>
                 <li className="flex items-center gap-x-5">
                   <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-accent-7">
-                    <span className="material-icons text-white">plane</span>
+                    <span className="material-icons text-white">diversity_3</span>
                   </span>
                   <div className="flex flex-col leading-5">
-                    <h6 className="font-bold text-gray-900">Reach Airport on Selected Date</h6>
-                    <p className="font-thin text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.{' '}
-                    </p>
+                    <h6 className=" text-xl font-bold text-gray-900">100000+ Audience Reach</h6>
                   </div>
                 </li>
               </ul>
@@ -338,12 +297,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="relative z-20 rounded-xl bg-white px-4 pt-4 pb-5 shadow-great">
                   <div className="relative mb-6 h-40 overflow-hidden rounded-3xl">
-                    <Image
-                      layout="fill"
-                      className="object-cover"
-                      src="/images/destination-4.jpg"
-                      alt="greece"
-                    />
+                    <Image layout="fill" className="object-cover" src="/images/destination-4.jpg" alt="greece" />
                   </div>
                   <h6 className="mb-2 text-lg font-bold text-gray-900">Trip to Greece</h6>
                   <div className="mb-4 flex text-gray-500">
@@ -397,48 +351,8 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      {/* Section News Letter */}
-      <section className="mb-32">
-        <div className="relative mx-auto max-w-full px-4 lg:max-w-7xl">
-          <div className="absolute bottom-0 -z-10 h-36 w-36 translate-y-1/2 rotate-90 transform lg:-right-20">
-            <DecorPlus1 className="decor-plus-style-1" />
-          </div>
-          <div className="relative w-full bg-white">
-            <div className="relative top-8 right-auto left-1/2 z-30 h-16 w-16 -translate-x-1/2 translate-y-0 transform rounded-full bg-gradient-to-b from-accent-6/60 to-accent-6 lg:absolute lg:top-0 lg:right-0 lg:translate-x-1/2 lg:-translate-y-1/2">
-              <span className="material-icons flex h-16 w-16 items-center justify-center text-white">near_me</span>
-            </div>
-            <div className="relative z-20 mb-8 overflow-hidden rounded-xl rounded-tl-3xl bg-accent-4/20 pt-20 pb-20 lg:rounded-3xl lg:rounded-tl-[120px]">
-              <div className="absolute top-0 right-0 h-[290px] w-[284px] -translate-y-1/3 translate-x-1/4 rotate-[45deg] scale-x-[-1] transform">
-                <DecorEllipse1 className="stroke-accent-6/10 opacity-10" />
-              </div>
-              <div className="absolute -bottom-0 left-4 h-[397px] w-[389px] translate-y-1/3 transform">
-                <DecorEllipse1 className="stroke-accent-6/10 opacity-10" />
-              </div>
-              <div className="relative z-10">
-                <h6 className="mb-10 px-4 text-center text-lg font-bold leading-normal text-gray-500 lg:px-36 lg:text-3xl">
-                  Subscribe to get information, latest news and other interesting offers about Cobham
-                </h6>
-                <form action="" className="flex justify-center lg:space-x-5">
-                  <fieldset className="relative">
-                    <span className="material-icons absolute flex h-full w-16 items-center justify-center text-gray-500">
-                      mail_outline
-                    </span>
-                    <input
-                      type="text"
-                      placeholder="Your Email"
-                      className="w-auto appearance-none rounded-l-lg border-2 border-transparent bg-white py-4 pl-14 transition duration-300 focus:border-accent-6 focus:outline-none lg:w-96 lg:rounded-lg"
-                    />
-                  </fieldset>
-                  <button className="rounded-r-lg bg-gradient-to-b from-accent-2/90 to-accent-2 py-4 px-4 text-white lg:rounded-lg lg:px-16">
-                    <span className="hidden lg:block">Subscribe</span>
-                    <span className="material-icons block lg:hidden">search</span>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <VolunteerSection />
       <footer className="relative overflow-x-hidden pb-32">
         <div className="h-6- bg-accent-6.20 absolute -bottom-0 -right-10 z-10 w-60 rounded-full blur-3xl"></div>
         <div className="relative mx-auto max-w-full px-4 lg:max-w-7xl">
@@ -515,7 +429,7 @@ const Home: NextPage = () => {
             <div className="mt-5 w-full lg:mt-0 lg:w-3/12">
               <div className="flex space-x-5">
                 <Link href="https://facebook.com" className="cursor-pointer" passHref>
-                  <div >
+                  <div>
                     <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white fill-black shadow-xl">
                       <span className="bg-gradient-social absolute inset-0 rotate-0 transform opacity-0 transition-all duration-300 group-hover:rotate-[180deg] group-hover:opacity-100"></span>
                       <span className="relative z-20">
@@ -525,7 +439,7 @@ const Home: NextPage = () => {
                   </div>
                 </Link>
                 <Link href="https://instagram.com" className="cursor-pointer" passHref>
-                  <div >
+                  <div>
                     <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white fill-black shadow-xl">
                       <span className="bg-gradient-social absolute inset-0 rotate-0 transform opacity-0 transition-all duration-300 group-hover:rotate-[180deg] group-hover:opacity-100"></span>
                       <span className="relative z-20">
@@ -560,7 +474,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="pt-8 text-center text-sm text-gray-500">All rights reserved@jadoo.co</div>
+          <div className="pt-8 text-center text-sm text-gray-500">All rights reserved@theinfluencers.com.pk</div>
         </div>
       </footer>
     </div>

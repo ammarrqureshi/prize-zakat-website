@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
@@ -10,21 +10,21 @@ import 'swiper/css';
 const Items = [
   {
     id: '1',
-    desc: 'On the Windows talking pasture yet its express parties use. Sure last upon he same as knew next',
+    desc: 'We commend PRIZE for its dedication to establishing a Zakat-based economy and eliminating Riba (interest). By promoting a fair and ethical economy, PRIZE is paving the way for a more prosperous and spiritually sound society.',
     image: 'user-1.jpg',
     author: 'Susan Smith',
     role: 'London, UK',
   },
   {
     id: '2',
-    desc: 'On the Windows talking pasture yet its express parties use. Sure last upon he same as knew next',
+    desc: 'We commend PRIZE for its dedication to establishing a Zakat-based economy and eliminating Riba (interest). By promoting a fair and ethical economy, PRIZE is paving the way for a more prosperous and spiritually sound society.',
     image: 'user-2.jpg',
     author: 'Robert Danuarta',
     role: 'New York, USA',
   },
   {
     id: '3',
-    desc: 'On the Windows talking pasture yet its express parties use. Sure last upon he same as knew next',
+    desc: 'We commend PRIZE for its dedication to establishing a Zakat-based economy and eliminating Riba (interest). By promoting a fair and ethical economy, PRIZE is paving the way for a more prosperous and spiritually sound society.',
     image: 'user-3.jpg',
     author: 'Mia Khalifa',
     role: 'Los Angeles, USA',
@@ -114,7 +114,7 @@ export default function Testimonials() {
                             />
                           </span>
                           <p className="mb-8 text-gray-500">{item.desc}</p>
-<h6 className="text-lg text-gray-900">{item.author}</h6>
+                          <h6 className="text-lg text-gray-900">{item.author}</h6>
                           <h6 className="text-sm text-gray-500">{item.role}</h6>
                         </div>
                       </div>
