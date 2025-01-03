@@ -24,33 +24,39 @@ const Home: NextPage = () => {
     { image: 'client-4.png', alt: 'qantas' },
     { image: 'client-5.png', alt: 'alitalia' },
   ];
-  const services = [
+  const objectives = [
     {
+      id: 1,
       heading: 'Compulsory Zakat/Wealth Tax',
       icon: '/images/zakat.png',
       text: 'Zakat and wealth tax transfer resources from the rich to the poor , addressing basic needs',
     },
     {
+      id: 2,
       heading: 'Ushr/Production Tax',
       icon: '/images/building.png',
       text: 'Explain Ushr as a form of tax based on agricultural and industrial production',
     },
     {
+      id: 3,
       heading: 'Full Reserve Debt-Free Banking',
       icon: '/images/debt.png',
       text: 'Explain how full reserve banking differs from current fractional reserve banking',
     },
     {
+      id: 4,
       heading: 'Job guarantee at Basic wage',
       icon: '/images/worker.png',
       text: 'Explain how a job guarantee differs from unemployment benefits',
     },
     {
+      id: 5,
       heading: 'Simplified Single Rate Tax',
       icon: '/images/pie-chart.png',
       text: 'Discuss how a simplified corporate tax can promote business transparency and reduce tax evasion',
     },
     {
+      id: 6,
       heading: 'Zero Foreign Debt',
       icon: '/images/foreign-debt.png',
       text: 'Explain the harms of foreign debt and the importance of financial sovereignty',
@@ -152,18 +158,18 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-16 text-gray-900">
             {/* block 1 */}
-            {services.map((service, idx) => (
+            {objectives.map((objective, idx) => (
               <div key={idx} className=" h-[350px] w-full min-w-[350px]  px-4  lg:w-3/12">
-                <Link href="#">
+                <Link href={`/objective/${objective.id}`}>
                   <div className="group relative flex h-full w-full flex-col  justify-center rounded-[36px] bg-white py-4 px-6 text-center shadow-none shadow-great transition-all duration-300">
                     <div className="absolute bottom-8 left-8 -z-10 h-28 w-28 -translate-x-1/2 translate-y-1/2 transform rounded-tl-3xl rounded-br-lg bg-accent-3 transition-all duration-300 group-hover:left-6 group-hover:bottom-6 group-hover:-z-10"></div>
                     <div className="flex flex-col items-center justify-center gap-8">
                       <div className="group-hover:scale-110">
-                        <Image width={60} height={60} src={service.icon} alt="satellite" />
+                        <Image width={60} height={60} src={objective.icon} alt="satellite" />
                       </div>
                       <div>
-                        <h4 className="mb-3 text-xl font-semibold text-accent-8">{service.heading}</h4>
-                        <h5 className="font-regular mb-8 px-0 text-sm text-gray-500 lg:px-8">{service.text}</h5>
+                        <h4 className="mb-3 text-xl font-semibold text-accent-8">{objective.heading}</h4>
+                        <h5 className="font-regular mb-8 px-0 text-sm text-gray-500 lg:px-8">{objective.text}</h5>
                       </div>
                     </div>
                   </div>
