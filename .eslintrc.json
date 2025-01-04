@@ -9,5 +9,8 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "rules": {}
+  "rules": {
+    "react/prop-types": "off", // Disables prop-types validation
+    "react/react-in-jsx-scope": "off" // Disables the need for React in JSX scope
+  }
 }
