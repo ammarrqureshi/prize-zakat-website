@@ -10,7 +10,10 @@ const ZakatCalculator = () => {
     debts: '',
   });
 
-  const [zakatAmount, setZakatAmount] = useState<number | null>(null);
+  const [zakatAmount, setZakatAmount] = useState<{ grams: number | null; currency: number | null }>({
+    grams: null,
+    currency: null,
+  });
 
   const nisabGold = 87.48; // Nisab for gold in grams
   const nisabSilver = 612.36; // Nisab for silver in grams
@@ -24,7 +27,7 @@ const ZakatCalculator = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Convert inputs to numbers and calculate total assets
+    // Convert inputs to numbers
     const goldValue = parseFloat(formData.gold || '0');
     const silverValue = parseFloat(formData.silver || '0');
     const cashValue = parseFloat(formData.cash || '0');
@@ -34,10 +37,17 @@ const ZakatCalculator = () => {
     const totalAssets = goldValue + silverValue + cashValue + savingsValue - debtsValue;
 
     // Calculate Zakat
+    const zakatOnGold = goldValue * zakatRate;
+    const zakatOnSilver = silverValue * zakatRate;
+    const zakatOnCurrency = (cashValue + savingsValue - debtsValue) * zakatRate;
+
+    const zakatGrams = zakatOnGold + zakatOnSilver;
+    const zakatCurrency = zakatOnCurrency;
+
     if (totalAssets >= nisabGold || totalAssets >= nisabSilver) {
-      setZakatAmount(totalAssets * zakatRate);
+      setZakatAmount({ grams: zakatGrams, currency: zakatCurrency });
     } else {
-      setZakatAmount(0);
+      setZakatAmount({ grams: 0, currency: 0 });
     }
   };
 
@@ -53,7 +63,6 @@ const ZakatCalculator = () => {
         <p className="mb-8 text-center text-gray-600">Calculate your Zakat based on your assets and liabilities.</p>
 
         <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-6 rounded-lg bg-white p-6 shadow-lg">
-          {/* Gold */}
           <div>
             <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="gold">
               Gold (in grams)
@@ -68,8 +77,6 @@ const ZakatCalculator = () => {
               placeholder="Enter gold value in grams"
             />
           </div>
-
-          {/* Silver */}
           <div>
             <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="silver">
               Silver (in grams)
@@ -84,8 +91,6 @@ const ZakatCalculator = () => {
               placeholder="Enter silver value in grams"
             />
           </div>
-
-          {/* Cash */}
           <div>
             <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="cash">
               Cash (in your currency)
@@ -100,8 +105,6 @@ const ZakatCalculator = () => {
               placeholder="Enter cash value"
             />
           </div>
-
-          {/* Savings */}
           <div>
             <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="savings">
               Savings (in your currency)
@@ -116,8 +119,6 @@ const ZakatCalculator = () => {
               placeholder="Enter savings value"
             />
           </div>
-
-          {/* Debts */}
           <div>
             <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="debts">
               Debts (in your currency)
@@ -132,26 +133,27 @@ const ZakatCalculator = () => {
               placeholder="Enter debts value"
             />
           </div>
+<div className="flex justify-center items-center">
+          <button
+            type="submit"
+            className="flex items-center justify-center  gap-2 rounded-lg bg-accent-2 py-3 px-4 text-white hover:bg-accent-1 lg:rounded-xl"
+          >
+            <span className="inline-flex items-center justify-center rounded-full bg-white p-4  text-accent-2 shadow-accent-2/30 md:mr-3">
+              <span className="material-icons">attach_money</span>
+            </span>
+            <span className="block ">Calculate</span>
+          </button>{' '}
 
-          {/* Submit Button */}
-          <div className="flex items-center justify-center text-center">
-            <button
-              type="submit"
-              className="flex items-center justify-center  gap-2 rounded-lg bg-accent-2 py-3 px-4 text-white hover:bg-accent-1 lg:rounded-xl"
-            >
-              <span className="inline-flex items-center justify-center rounded-full bg-white p-4  text-accent-2 shadow-accent-2/30 md:mr-3">
-                <span className="material-icons">attach_money</span>
-              </span>
-              <span className="block ">Calculate</span>
-            </button>
-          </div>
+</div>
         </form>
 
-        {/* Result */}
-        {zakatAmount !== null && (
+        {zakatAmount.grams !== null && zakatAmount.currency !== null && (
           <div className="mt-8 p-4 text-center">
             <h2 className="text-xl font-bold text-gray-800">
-              Your Zakat Amount: {zakatAmount > 0 ? `${zakatAmount.toFixed(2)} (your currency)` : 'No Zakat due'}
+              Zakat on Gold & Silver: {zakatAmount.grams > 0 ? `${zakatAmount.grams.toFixed(2)} grams` : 'No Zakat due'}{' '}
+              <br />
+              Zakat on Other Assets:{' '}
+              {zakatAmount.currency > 0 ? `${zakatAmount.currency.toFixed(2)} (your currency)` : 'No Zakat due'}
             </h2>
           </div>
         )}
