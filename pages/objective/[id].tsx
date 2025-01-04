@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
-import Tabs from 'components/Tabs';
-import { objectives } from '../data';
+import { objectives } from 'components/data';
 
 import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
@@ -93,7 +92,7 @@ export default function ObjectivePage() {
         <div>
           <Image src="/images/hero-image.png" priority width={600} height={600} alt="zakat hero" />
         </div>
-        <style >{`
+        <style>{`
           .tab {
             width: 100%;
             padding: 0.5rem 1rem;

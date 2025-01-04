@@ -11,7 +11,7 @@ import DecorHero from 'assets/images/decor-intersect-1.svg';
 import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
 import DecorPlus1 from 'assets/images/decor-plus-style-1.svg';
 import DecorSwirl1 from 'assets/images/decor-swirl-style-1.svg';
-import { objectives } from './data';
+import { objectives } from 'components/data';
 const Home: NextPage = () => {
   const Clients = [
     { image: 'client-1.png', alt: 'axon' },
