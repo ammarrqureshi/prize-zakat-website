@@ -1,22 +1,17 @@
+'use client';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from 'assets/images/logo.png';
 import Testimonials from 'components/Testimonials';
 
 import Header from 'components/Header';
-import Footer from 'components/Footer';
 import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
 import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
 import DecorPlus1 from 'assets/images/decor-plus-style-1.svg';
 import DecorSwirl1 from 'assets/images/decor-swirl-style-1.svg';
-import DecorEllipse1 from 'assets/images/decor-ellipse-style-1.svg';
-import FacebookIco from 'assets/images/facebook.svg';
-import InstagramIco from 'assets/images/instagram.svg';
-import TwitterIco from 'assets/images/twitter.svg';
-import {objectives} from './data'
+import { objectives } from './data';
 const Home: NextPage = () => {
   const Clients = [
     { image: 'client-1.png', alt: 'axon' },
@@ -88,9 +83,11 @@ const Home: NextPage = () => {
               <p className="mb-8 max-w-lg text-sm leading-6 text-gray-500 lg:text-base lg:leading-8">
                 Establishing a society and economy based on Islamic Principles of Justice, Equity and Compassion{' '}
               </p>
-              <div className="flex justify-between items-center ">
+              <div className="flex items-center justify-between ">
                 <Link href="/about">
-                  <p className="md:mr-11 rounded-xl bg-accent-1 px-4 py-2 md:px-6 md:py-4 text-white  shadow-[0-25-35px]">Find Out More</p>
+                  <p className="rounded-xl bg-accent-1 px-4 py-2 text-white shadow-[0-25-35px] md:mr-11 md:px-6  md:py-4">
+                    Find Out More
+                  </p>
                 </Link>
                 <Link href="/contact" className="flex items-center">
                   <span className="mr-6 inline-flex items-center justify-center rounded-full bg-accent-4  p-4 text-white shadow-accent-2/30">
@@ -122,9 +119,12 @@ const Home: NextPage = () => {
           <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-16 text-gray-900">
             {/* block 1 */}
             {objectives.map((objective, idx) => (
-              <div key={idx} className=" h-[350px] w-full md:min-w-[350px]  px-4  lg:w-3/12">
+              <div key={idx} className=" h-[350px] w-full px-4  md:min-w-[350px]  lg:w-3/12">
                 <Link href={`/objective/${objective.id}`}>
-                  <div className="group relative flex h-full w-full flex-col  justify-center rounded-[36px] bg-white py-4 px-6 text-center shadow-none shadow-great transition-all duration-300">
+                  <div
+                    suppressHydrationWarning
+                    className="group relative flex h-full w-full flex-col  justify-center rounded-[36px] bg-white py-4 px-6 text-center shadow-none shadow-great transition-all duration-300"
+                  >
                     <div className="absolute bottom-8 left-8 -z-10 h-28 w-28 -translate-x-1/2 translate-y-1/2 transform rounded-tl-3xl rounded-br-lg bg-accent-3 transition-all duration-300 group-hover:left-6 group-hover:bottom-6 group-hover:-z-10"></div>
                     <div className="flex flex-col items-center justify-center gap-8">
                       <div className="group-hover:scale-110">
@@ -151,14 +151,17 @@ const Home: NextPage = () => {
               Resources
             </h3>
           </div>
-          <div className="relative flex flex-wrap justify-center items-center gap-14  pr-0   lg:pr-8">
+          <div className="relative flex flex-wrap items-center justify-center gap-14  pr-0   lg:pr-8">
             <div className="absolute bottom-10 right-0 h-[252px] w-full md:w-[96px] ">
               <DecorSwirl1 className="stroke-gray-600" />
             </div>
             {resources.map((resource) => (
               <Link href={resource.link}>
                 {' '}
-                <div className="relative z-20 w-full  md:w-[365px] transition duration-300 hover:scale-110  ">
+                <div
+                  suppressHydrationWarning
+                  className="relative z-20 w-full  transition duration-300 hover:scale-110 md:w-[365px]  "
+                >
                   <div className="flex flex-col rounded-3xl bg-white pb-10 shadow-great">
                     <div className="relative h-96 overflow-hidden rounded-tr-3xl rounded-tl-3xl">
                       <div className=" relative z-[90] flex h-full w-full items-center justify-center bg-gray-900/50 ">

@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-      <Component className="relative mb-28" {...pageProps} />
+      <Component suppressHydrationWarning className="relative mb-28" {...pageProps} />
     </Layout>
   );
 }
