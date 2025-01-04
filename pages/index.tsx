@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Testimonials from 'components/Testimonials';
 
+import ZakatCalculator from 'components/ZakatCalculator';
 import Header from 'components/Header';
 import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
@@ -23,19 +24,19 @@ const Home: NextPage = () => {
 
   const resources = [
     {
-      title: 'Building a Sustainable Future',
+      title: 'Is Money Safe in Banks',
       thumbnail: '/images/resource-thumbnail-1.jpg',
       icon: '/images/resource-1.png',
       link: 'https://youtu.be/7kVOghAPfWw?si=HOlBgAZB1HnS-m3X',
     },
     {
-      title: 'The Dangers of Interest (Riba)',
+      title: 'Islamic Economy on TBT Podcast',
       thumbnail: '/images/resource-thumbnail-2.jpg',
       icon: '/images/resource-2.png',
       link: 'https://youtu.be/KB7j1um5dE8?si=To20RzvJUpmIyfVh',
     },
     {
-      title: 'The Power of Zakat',
+      title: 'On EON Podcast',
       thumbnail: '/images/resource-thumbnail-3.jpg',
       icon: '/images/resource-3.png',
       link: 'https://youtu.be/1fjhIw6KxZQ?si=l7l0GWZF6ewmUIpb',
@@ -50,11 +51,11 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
         {/* Meta Tag */}
-        <meta property="og:url" content="https://next-travel-agency.vercel.app/" />
+        <meta property="og:url" content="https://prize-zakat-website.vercel.app/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Jadoo Travel Agency" />
+        <meta property="og:title" content="PRIZE , Zakat Economy" />
         <meta property="og:description" content="" />
-        <meta property="og:image" content="https://next-travel-agency.vercel.app/jadoo-travel-agency.jpg" />
+        <meta property="og:image" content="" />
       </Head>
       {/* Header */}
       <div className="absolute z-20 w-full py-6 lg:z-10 lg:py-12">
@@ -143,7 +144,9 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      {/* Top Destinations Section */}
+
+      <VolunteerSection />
+      {/* Resources Section */}
       <section id="resources" className="mb-28">
         <div className="relative mx-auto max-w-7xl px-4">
           <div className="mb-16 flex flex-col text-center">
@@ -208,7 +211,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <VolunteerSection />
       {/* Section Easy in Fast */}
       <div className="relative mb-28 bg-accent-8  py-16 text-white">
         <div className="absolute -top-0 right-0  z-10 h-60 w-60 rounded-full bg-accent-1/60 blur-3xl"></div>
@@ -312,23 +314,7 @@ const Home: NextPage = () => {
       <Testimonials />
       {/* Section Clients */}
       <section className="mb-28">
-        <div className="relative mx-auto max-w-full lg:max-w-7xl">
-          <div className="grid grid-cols-1 gap-y-4 lg:grid-cols-5 lg:gap-y-0 lg:gap-x-4">
-            {Clients.map((item, idx) => (
-              <div
-                key={idx}
-                className="relative h-20 transform rounded-2xl bg-white p-4 grayscale transition-all duration-300 hover:-translate-y-1 hover:shadow-great hover:grayscale-0"
-              >
-                <Image
-                  src={`/images/${item.image}`}
-                  alt={item.alt}
-                  className="object-contain lg:object-none"
-                  layout="fill"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ZakatCalculator />
       </section>
 
       <VolunteerSection />
