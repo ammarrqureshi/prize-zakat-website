@@ -133,18 +133,17 @@ const ZakatCalculator = () => {
               placeholder="Enter debts value"
             />
           </div>
-<div className="flex justify-center items-center">
-          <button
-            type="submit"
-            className="flex items-center justify-center  gap-2 rounded-lg bg-accent-2 py-3 px-4 text-white hover:bg-accent-1 lg:rounded-xl"
-          >
-            <span className="inline-flex items-center justify-center rounded-full bg-white p-4  text-accent-2 shadow-accent-2/30 md:mr-3">
-              <span className="material-icons">attach_money</span>
-            </span>
-            <span className="block ">Calculate</span>
-          </button>{' '}
-
-</div>
+          <div className="flex items-center justify-center">
+            <button
+              type="submit"
+              className="flex items-center justify-center  gap-2 rounded-lg bg-accent-2 py-3 px-4 text-white hover:bg-accent-1 lg:rounded-xl"
+            >
+              <span className="inline-flex items-center justify-center rounded-full bg-white p-4  text-accent-2 shadow-accent-2/30 md:mr-3">
+                <span className="material-icons">attach_money</span>
+              </span>
+              <span className="block ">Calculate</span>
+            </button>{' '}
+          </div>
         </form>
 
         {zakatAmount.grams !== null && zakatAmount.currency !== null && (

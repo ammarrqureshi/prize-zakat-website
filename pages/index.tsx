@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
   const resources = [
     {
-      title: 'Is Money Safe in Banks',
+      title: 'Is Money Safe in Banks?',
       thumbnail: '/images/resource-thumbnail-1.jpg',
       icon: '/images/resource-1.png',
       link: 'https://youtu.be/7kVOghAPfWw?si=HOlBgAZB1HnS-m3X',
