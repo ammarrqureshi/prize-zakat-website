@@ -73,7 +73,7 @@ const Home: NextPage = () => {
         <div className="absolute -left-80 -top-10 -z-10 h-[496px] w-[478px] rounded-full bg-accent-4/30 blur-3xl"></div>
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex">
-            <div className="w-full pt-52 lg:w-6/12">
+            <div className="w-full max-sm:pt-44 md:pt-52 lg:w-6/12">
               <h1 className="mb-6 text-sm font-bold uppercase text-accent-2 lg:text-xl">Economy that can save you</h1>
               <h2 className="mb-8 font-serif text-4xl leading-tight tracking-tighter text-gray-900 lg:text-[84px] lg:leading-[89px]">
                 Zakat,{' '}
@@ -89,8 +89,8 @@ const Home: NextPage = () => {
                 Establishing a society and economy based on Islamic Principles of Justice, Equity and Compassion{' '}
               </p>
               <div className="flex justify-between items-center ">
-                <Link href="/">
-                  <p className="md:mr-11 rounded-xl bg-accent-1 px-4 py-2 md:px-6 md:py-4 text-white max-sm:text-xs shadow-[0-25-35px]">Find Out More</p>
+                <Link href="/about">
+                  <p className="md:mr-11 rounded-xl bg-accent-1 px-4 py-2 md:px-6 md:py-4 text-white  shadow-[0-25-35px]">Find Out More</p>
                 </Link>
                 <Link href="/contact" className="flex items-center">
                   <span className="mr-6 inline-flex items-center justify-center rounded-full bg-accent-4  p-4 text-white shadow-accent-2/30">

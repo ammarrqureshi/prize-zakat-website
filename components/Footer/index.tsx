@@ -1,6 +1,5 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import classNames from 'classnames';
 
 import Image from 'next/image';
 import Logo from 'assets/images/logo.png';
@@ -9,13 +8,13 @@ import InstagramIco from 'assets/images/instagram.svg';
 import TwitterIco from 'assets/images/twitter.svg';
 export default function Footer() {
   return (
-    <footer className="relative overflow-x-hidden pb-32 mt-28">
+    <footer className="relative mt-28 overflow-x-hidden pb-32">
       <div className="h-6- bg-accent-6.20 absolute -bottom-0 -right-10 z-10 w-60 rounded-full blur-3xl"></div>
       <div className="relative mx-auto max-w-full px-4 lg:max-w-7xl">
         <div className="mb-12 flex flex-wrap">
           <div className="w-full lg:w-3/12 lg:px-4 ">
             <div className="w-28">
-              <Image width={100} height={100} src={Logo} className="logo-style-1" />
+              <Image alt="logo" width={100} height={100} src={Logo} className="logo-style-1" />
             </div>
             <br></br>
             <p className="pr-8 text-sm text-gray-500">
@@ -90,7 +89,7 @@ export default function Footer() {
                 </div>
               </Link>
               <Link href="https://twitter.com" className="cursor-pointer" passHref>
-                <div target="blank" rel="noreferrer noopener">
+                <div>
                   <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-accent-4 fill-black shadow-xl">
                     <span className="bg-gradient-social absolute inset-0 rotate-0 transform opacity-0 transition-all duration-300 group-hover:rotate-[180deg] group-hover:opacity-100"></span>
                     <span className="relative z-20">

@@ -113,7 +113,7 @@ export default function Testimonials() {
                               alt={item.author}
                             />
                           </span>
-                          <p className="mb-8 max-sm:text-xs max-sm:text-normal text-gray-500">{item.desc}</p>
+                          <p className="max-sm:text-normal mb-8 text-gray-500 max-sm:text-xs">{item.desc}</p>
                           <h6 className="text-lg text-gray-900">{item.author}</h6>
                           <h6 className="text-sm text-gray-500">{item.role}</h6>
                         </div>

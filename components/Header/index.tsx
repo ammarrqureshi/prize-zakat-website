@@ -17,7 +17,7 @@ export default function Header() {
       <div className="flex items-center justify-between">
         <Link href="/">
           <div className="w-28">
-            <Image width={100} height={100} src={Logo} className="logo-style-1" />
+            <Image alt="logo" width={100} height={100} src={Logo} className="logo-style-1" />
           </div>
         </Link>
         <button

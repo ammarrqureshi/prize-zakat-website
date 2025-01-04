@@ -1,4 +1,3 @@
-
 import Head from 'next/head';
 import { useState } from 'react';
 
@@ -29,19 +28,16 @@ const Contact = () => {
         <meta name="description" content="Get in touch with us to become a PRIZE volunteer." />
       </Head>
 
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4 py-8">
-        <h1 className="mb-6 text-4xl font-serif text-center text-gray-800">Contact Us</h1>
+      <div className="flex min-h-screen flex-col items-center justify-center rounded-xl bg-gray-50 px-4 py-8">
+        <h1 className="mb-6 text-center font-serif text-4xl text-gray-800">Contact Us</h1>
         <p className="mb-8 text-center text-gray-600">
           Interested in becoming a PRIZE volunteer? Fill out the form below, and we’ll get back to you!
         </p>
 
-        <form
-          onSubmit={handleSubmit}
-          className="w-full max-w-lg space-y-6 rounded-lg bg-white p-6 shadow-lg"
-        >
+        <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-6 rounded-lg bg-white p-6 shadow-lg">
           {/* Full Name */}
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="fullName">
+            <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="fullName">
               Full Name
             </label>
             <input
@@ -57,7 +53,7 @@ const Contact = () => {
 
           {/* Email */}
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="email">
+            <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="email">
               Email
             </label>
             <input
@@ -73,7 +69,7 @@ const Contact = () => {
 
           {/* Phone */}
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="phone">
+            <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="phone">
               Phone Number
             </label>
             <input
@@ -89,7 +85,7 @@ const Contact = () => {
 
           {/* Why You Want to Become a Volunteer */}
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="reason">
+            <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="reason">
               Why do you want to become a PRIZE volunteer?
             </label>
             <textarea
@@ -105,7 +101,7 @@ const Contact = () => {
 
           {/* Understanding Mission */}
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-700">
+            <label className="mb-2 block text-sm font-medium text-gray-700">
               Do you understand the mission of PRIZE?
             </label>
             <select

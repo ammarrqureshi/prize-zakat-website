@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import Tabs from 'components/Tabs'
 import {objectives} from '../data.ts';
 
+import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -55,8 +56,8 @@ export default function ObjectivePage() {
     }
   };
 
-  return (
-    <div className=" grid grid-cols-2 gap-8 max-[600px]:grid-cols-1">
+  return (           <>
+    <div className=" mb-36 grid grid-cols-2 gap-8 max-[600px]:grid-cols-1">
          <span className="absolute -z-10 right-0 top-0 bottom-0 h-screen w-5/12 ">
           <DecorHero className="fill-accent-3/30" />
         </span>
@@ -102,16 +103,21 @@ border-radius: @apply rounded-2xl;
           color: #fff;
  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
         }
-        .tab:hover {
-          color: #0056b3;
+ @media (max-width: 768px):{
+         .tab:hover {
+background: rgba(29,78,216,.2);
         }
-        .tab-content {
+ 
+}
+       .tab-content {
           margin-top: 1rem;
           font-size: 1rem;
           color: #333;
         }
       `}</style>
     </div>
+<VolunteerSection/>
+</>
   );
 
 

@@ -1,19 +1,9 @@
-import Head from 'next/head';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Tabs from 'components/Tabs';
-import Testimonials from 'components/Testimonials';
 
+import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
-import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
-import DecorPlus1 from 'assets/images/decor-plus-style-1.svg';
-import DecorSwirl1 from 'assets/images/decor-swirl-style-1.svg';
-import DecorEllipse1 from 'assets/images/decor-ellipse-style-1.svg';
-import FacebookIco from 'assets/images/facebook.svg';
-import InstagramIco from 'assets/images/instagram.svg';
-import TwitterIco from 'assets/images/twitter.svg';
-
 const Events: NextPage = () => {
   const events = [
     {
@@ -41,10 +31,10 @@ const Events: NextPage = () => {
       {events.map((event) => (
         <Link href={event.rsvp}>
           {' '}
-          <div className="relative z-20 w-full transition duration-300 hover:shadow-2xl">
-            <div className="flex justify-between overflow-hidden rounded-3xl bg-white shadow-great">
+          <div className="relative w-full transition duration-300 hover:shadow-2xl">
+            <div className="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-great md:flex-row">
               {/* event thumbnail */}
-              <div className=" cover h-28 w-48 overflow-hidden bg-red-500 ">
+              <div className=" cover h-28 overflow-hidden bg-red-500 md:w-48 ">
                 <Image
                   className="cover w-full object-cover"
                   width={100}
@@ -53,18 +43,18 @@ const Events: NextPage = () => {
                   alt="event_thumbnail"
                 />
               </div>
-              <div className="flex items-center gap-8 ">
+              <div className="flex flex-col items-center gap-8 p-4 md:flex-row ">
                 {/* event title */}
-                <h6 className="text-lg text-black ">{event.title}</h6>
+                <h6 className="text-lg text-black">{event.title}</h6>
                 {/* event date */}
-                <div className="flex  items-center justify-between gap-3">
+                <div className="flex  items-center gap-3 md:justify-between">
                   <span className="mr-6 inline-flex items-center justify-center rounded-full bg-white  p-4 text-black shadow-accent-2/30">
                     <span className="material-icons">calendar_month</span>
                   </span>
                   Date : {event.date}
                 </div>
                 {/* event location */}
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 md:justify-between">
                   <span className="mr-6 inline-flex items-center justify-center rounded-full bg-white  p-4 text-black shadow-accent-2/30">
                     <span className="material-icons">location_on</span>
                   </span>
@@ -83,6 +73,9 @@ const Events: NextPage = () => {
           </div>
         </Link>
       ))}
+      <div className="mt-36">
+        <VolunteerSection />
+      </div>
     </div>
   );
 };

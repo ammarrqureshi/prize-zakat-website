@@ -1,18 +1,10 @@
-import Head from 'next/head';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Tabs from 'components/Tabs';
-import Testimonials from 'components/Testimonials';
 
+import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
 import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
-import DecorPlus1 from 'assets/images/decor-plus-style-1.svg';
-import DecorSwirl1 from 'assets/images/decor-swirl-style-1.svg';
-import DecorEllipse1 from 'assets/images/decor-ellipse-style-1.svg';
-import FacebookIco from 'assets/images/facebook.svg';
-import InstagramIco from 'assets/images/instagram.svg';
-import TwitterIco from 'assets/images/twitter.svg';
 
 const About: NextPage = () => {
   return (
@@ -148,6 +140,7 @@ const About: NextPage = () => {
           </ul>
         </div>
       </section>
+      <VolunteerSection />
     </>
   );
 };
