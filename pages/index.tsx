@@ -6,6 +6,7 @@ import Logo from 'assets/images/logo.png';
 import Testimonials from 'components/Testimonials';
 
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
 import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
@@ -15,7 +16,7 @@ import DecorEllipse1 from 'assets/images/decor-ellipse-style-1.svg';
 import FacebookIco from 'assets/images/facebook.svg';
 import InstagramIco from 'assets/images/instagram.svg';
 import TwitterIco from 'assets/images/twitter.svg';
-
+import {objectives} from './data'
 const Home: NextPage = () => {
   const Clients = [
     { image: 'client-1.png', alt: 'axon' },
@@ -23,44 +24,6 @@ const Home: NextPage = () => {
     { image: 'client-3.png', alt: 'expedia' },
     { image: 'client-4.png', alt: 'qantas' },
     { image: 'client-5.png', alt: 'alitalia' },
-  ];
-  const objectives = [
-    {
-      id: 1,
-      heading: 'Compulsory Zakat/Wealth Tax',
-      icon: '/images/zakat.png',
-      text: 'Zakat and wealth tax transfer resources from the rich to the poor , addressing basic needs',
-    },
-    {
-      id: 2,
-      heading: 'Ushr/Production Tax',
-      icon: '/images/building.png',
-      text: 'Explain Ushr as a form of tax based on agricultural and industrial production',
-    },
-    {
-      id: 3,
-      heading: 'Full Reserve Debt-Free Banking',
-      icon: '/images/debt.png',
-      text: 'Explain how full reserve banking differs from current fractional reserve banking',
-    },
-    {
-      id: 4,
-      heading: 'Job guarantee at Basic wage',
-      icon: '/images/worker.png',
-      text: 'Explain how a job guarantee differs from unemployment benefits',
-    },
-    {
-      id: 5,
-      heading: 'Simplified Single Rate Tax',
-      icon: '/images/pie-chart.png',
-      text: 'Discuss how a simplified corporate tax can promote business transparency and reduce tax evasion',
-    },
-    {
-      id: 6,
-      heading: 'Zero Foreign Debt',
-      icon: '/images/foreign-debt.png',
-      text: 'Explain the harms of foreign debt and the importance of financial sovereignty',
-    },
   ];
 
   const resources = [
@@ -125,9 +88,9 @@ const Home: NextPage = () => {
               <p className="mb-8 max-w-lg text-sm leading-6 text-gray-500 lg:text-base lg:leading-8">
                 Establishing a society and economy based on Islamic Principles of Justice, Equity and Compassion{' '}
               </p>
-              <div className="flex">
+              <div className="flex justify-between items-center ">
                 <Link href="/">
-                  <p className="mr-11 rounded-xl bg-accent-1 px-6 py-4 text-white shadow-[0-25-35px]">Find Out More</p>
+                  <p className="md:mr-11 rounded-xl bg-accent-1 px-4 py-2 md:px-6 md:py-4 text-white max-sm:text-xs shadow-[0-25-35px]">Find Out More</p>
                 </Link>
                 <Link href="/contact" className="flex items-center">
                   <span className="mr-6 inline-flex items-center justify-center rounded-full bg-accent-4  p-4 text-white shadow-accent-2/30">
@@ -159,7 +122,7 @@ const Home: NextPage = () => {
           <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-16 text-gray-900">
             {/* block 1 */}
             {objectives.map((objective, idx) => (
-              <div key={idx} className=" h-[350px] w-full min-w-[350px]  px-4  lg:w-3/12">
+              <div key={idx} className=" h-[350px] w-full md:min-w-[350px]  px-4  lg:w-3/12">
                 <Link href={`/objective/${objective.id}`}>
                   <div className="group relative flex h-full w-full flex-col  justify-center rounded-[36px] bg-white py-4 px-6 text-center shadow-none shadow-great transition-all duration-300">
                     <div className="absolute bottom-8 left-8 -z-10 h-28 w-28 -translate-x-1/2 translate-y-1/2 transform rounded-tl-3xl rounded-br-lg bg-accent-3 transition-all duration-300 group-hover:left-6 group-hover:bottom-6 group-hover:-z-10"></div>
@@ -188,14 +151,14 @@ const Home: NextPage = () => {
               Resources
             </h3>
           </div>
-          <div className="relative flex flex-wrap gap-14  pr-0   lg:pr-8">
-            <div className="absolute bottom-10 right-0 h-[252px] w-[96px] ">
+          <div className="relative flex flex-wrap justify-center items-center gap-14  pr-0   lg:pr-8">
+            <div className="absolute bottom-10 right-0 h-[252px] w-full md:w-[96px] ">
               <DecorSwirl1 className="stroke-gray-600" />
             </div>
             {resources.map((resource) => (
               <Link href={resource.link}>
                 {' '}
-                <div className="relative z-20 w-[365px] transition duration-300 hover:scale-110  ">
+                <div className="relative z-20 w-full  md:w-[365px] transition duration-300 hover:scale-110  ">
                   <div className="flex flex-col rounded-3xl bg-white pb-10 shadow-great">
                     <div className="relative h-96 overflow-hidden rounded-tr-3xl rounded-tl-3xl">
                       <div className=" relative z-[90] flex h-full w-full items-center justify-center bg-gray-900/50 ">
@@ -366,111 +329,6 @@ const Home: NextPage = () => {
       </section>
 
       <VolunteerSection />
-      <footer className="relative overflow-x-hidden pb-32">
-        <div className="h-6- bg-accent-6.20 absolute -bottom-0 -right-10 z-10 w-60 rounded-full blur-3xl"></div>
-        <div className="relative mx-auto max-w-full px-4 lg:max-w-7xl">
-          <div className="mb-12 flex flex-wrap">
-            <div className="w-full lg:w-3/12 lg:px-4 ">
-              <div className="w-28">
-                <Image width={100} height={100} src={Logo} className="logo-style-1" />
-              </div>
-              <br></br>
-              <p className="pr-8 text-sm text-gray-500">
-                The Policy Research Institute for Zakat Economy (PRIZE) is dedicated to promote and establish a
-                Zakat-based, Riba-free economic system as a sustainable alternative
-              </p>
-            </div>
-            <div className="w-full lg:w-6/12">
-              <div className="grid grid-cols-1 gap-y-4 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-4">
-                <div>
-                  <h6 className="mt-2 mb-6 text-xl font-semibold tracking-tight text-gray-900">Company</h6>
-                  <ul className="space-y-2 text-lg text-gray-500">
-                    <li>
-                      <Link href="/about">
-                        <p>About</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#resources">
-                        <p>Resources</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/events">
-                        <p>Events</p>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h6 className="mt-2 mb-6 text-xl font-semibold tracking-tight text-gray-900">Recent Updates</h6>
-                  <ul className="space-y-2 text-lg text-gray-500">
-                    <li>
-                      <Link href={resources[0].link}>
-                        <p>Building a Sustainable future</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={resources[1].link}>
-                        <p>The Dangers of Interest</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={resources[2].link}>
-                        <p>The Power of Zakat</p>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="mt-5 w-full lg:mt-0 lg:w-3/12">
-              <div className="flex space-x-5">
-                <Link href="https://facebook.com" className="cursor-pointer" passHref>
-                  <div>
-                    <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-accent-4 fill-black shadow-xl">
-                      <span className="bg-gradient-social absolute inset-0 rotate-0 transform opacity-0 transition-all duration-300 group-hover:rotate-[180deg] group-hover:opacity-100"></span>
-                      <span className="relative z-20">
-                        <FacebookIco className="fill-black group-hover:fill-white" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-                <Link href="https://instagram.com" className="cursor-pointer" passHref>
-                  <div>
-                    <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-accent-4 fill-black shadow-xl">
-                      <span className="bg-gradient-social absolute inset-0 rotate-0 transform opacity-0 transition-all duration-300 group-hover:rotate-[180deg] group-hover:opacity-100"></span>
-                      <span className="relative z-20">
-                        <InstagramIco className="fill-black group-hover:fill-white" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-                <Link href="https://twitter.com" className="cursor-pointer" passHref>
-                  <div target="blank" rel="noreferrer noopener">
-                    <div className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-accent-4 fill-black shadow-xl">
-                      <span className="bg-gradient-social absolute inset-0 rotate-0 transform opacity-0 transition-all duration-300 group-hover:rotate-[180deg] group-hover:opacity-100"></span>
-                      <span className="relative z-20">
-                        <TwitterIco className="fill-black group-hover:fill-white" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </div>{' '}
-              <Link
-                href="/contact"
-                className="mt-14 flex w-52 items-center justify-between   rounded-r-lg bg-accent-2 py-4 px-6 text-white hover:bg-accent-1 lg:rounded-xl"
-              >
-                <span className=" inline-flex items-center justify-center rounded-full bg-white  p-4 text-accent-2 shadow-accent-2/30">
-                  <span className="material-icons">call</span>
-                </span>
-                <span className="hidden lg:block">Contact Us</span>
-              </Link>
-            </div>
-          </div>
-          <div className="pt-8 text-center text-sm text-gray-500">All rights reserved@theinfluencers.com.pk</div>
-        </div>
-      </footer>
     </div>
   );
 };

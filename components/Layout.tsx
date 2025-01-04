@@ -2,6 +2,8 @@
 import { useRouter } from 'next/router';
 import Header from 'components/Header';
 
+import Footer from 'components/Footer';
+
 const Layout = ({ children }) => {
   const router = useRouter();
   const isHomePage = router.pathname === '/';
@@ -9,7 +11,10 @@ const Layout = ({ children }) => {
   return (
     <div>
       {isHomePage ? (
-        <main>{children}</main>
+        <main>{children}
+
+<Footer/>
+</main>
       ) : (
         <div>
           <div className="py-4">
@@ -17,6 +22,7 @@ const Layout = ({ children }) => {
           </div>
 
           <main className="mx-auto max-w-7xl px-4">{children}</main>
+<Footer/>
         </div>
       )}
     </div>

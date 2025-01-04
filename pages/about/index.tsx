@@ -54,7 +54,7 @@ const About: NextPage = () => {
           <h2 className="mb-8 font-serif text-4xl leading-tight tracking-tighter text-gray-900  lg:leading-[89px]">
             Company Overview
           </h2>
-          <div className="w-10/12">
+          <div className="md:w-10/12">
             <p>
               The Policy Research Institute for Zakat Economy (PRIZE) is dedicated to creating a society grounded in
               Islamic principles of justice, equity, and compassion. We aim to promote and establish a Zakat-based,

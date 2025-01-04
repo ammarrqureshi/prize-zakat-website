@@ -53,7 +53,7 @@ export default function Testimonials() {
   }, [swiperRef, activeSlide]);
 
   return (
-    <div className="mb-28">
+    <div className="mb-28 max-sm:mb-48 ">
       <div className="relative mx-auto max-w-full px-4 lg:max-w-7xl">
         <div className="flex flex-wrap">
           <div className="w-full px-0 lg:w-5/12 lg:pl-8 lg:pr-20">
@@ -113,7 +113,7 @@ export default function Testimonials() {
                               alt={item.author}
                             />
                           </span>
-                          <p className="mb-8 text-gray-500">{item.desc}</p>
+                          <p className="mb-8 max-sm:text-xs max-sm:text-normal text-gray-500">{item.desc}</p>
                           <h6 className="text-lg text-gray-900">{item.author}</h6>
                           <h6 className="text-sm text-gray-500">{item.role}</h6>
                         </div>
