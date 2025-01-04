@@ -38,7 +38,7 @@ const Tabs = () => {
       </div>
       <div className="tab-content">{renderContent()}</div>
 
-      <style jsx>{`
+      <style >{`
         .tabs {
           display: flex;
           gap: 1rem;

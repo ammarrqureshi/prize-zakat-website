@@ -155,8 +155,8 @@ const Home: NextPage = () => {
             <div className="absolute bottom-10 right-0 h-[252px] w-full md:w-[96px] ">
               <DecorSwirl1 className="stroke-gray-600" />
             </div>
-            {resources.map((resource) => (
-              <Link href={resource.link}>
+            {resources.map((resource, idx) => (
+              <Link key={idx} href={resource.link}>
                 {' '}
                 <div
                   suppressHydrationWarning

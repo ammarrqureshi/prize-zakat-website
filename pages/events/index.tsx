@@ -28,8 +28,8 @@ const Events: NextPage = () => {
       <h2 className="mb-8 font-serif text-4xl leading-tight tracking-tighter text-gray-900  lg:leading-[89px]">
         Events
       </h2>
-      {events.map((event) => (
-        <Link href={event.rsvp}>
+      {events.map((event , idx) => (
+        <Link key={idx} href={event.rsvp}>
           {' '}
           <div className="relative w-full transition duration-300 hover:shadow-2xl">
             <div className="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-great md:flex-row">

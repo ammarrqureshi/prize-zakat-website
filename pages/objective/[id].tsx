@@ -7,14 +7,14 @@ import DecorHero from 'assets/images/decor-intersect-1.svg';
 import Image from 'next/image';
 import { useState } from 'react';
 export default function ObjectivePage() {
+  const [activeTab, setActiveTab] = useState('Tab1');
   const router = useRouter();
   const { id } = router.query;
 
   if (!id) {
     return <p>Loading...</p>; // Render a loading state initially
-  
-}
-//@ts-ignore
+  }
+  //@ts-ignore
   const objective = objectives[id - 1];
 
   if (!objective) {
@@ -23,8 +23,6 @@ export default function ObjectivePage() {
 
   console.log('Router Query:', router.query);
   // components/Tabs.js
-
-  const [activeTab, setActiveTab] = useState('Tab1');
 
   const tabs = [
     { name: 'Tab1', label: 'Islamic Banking' },
@@ -36,8 +34,8 @@ export default function ObjectivePage() {
       case 'Tab1':
         return (
           <div className="flex flex-col gap-4 ">
-            {objective.islamic.map((pointer) => (
-              <div className="flex gap-3 ">
+            {objective.islamic.map((pointer, idx) => (
+              <div key={idx} className="flex gap-3 ">
                 <span className="material-icons text-accent-1">play_arrow</span>
                 <p>
                   <span className="font-bold leading-tight">{pointer.heading}: </span>
@@ -50,8 +48,8 @@ export default function ObjectivePage() {
       case 'Tab2':
         return (
           <div className="flex flex-col gap-4 ">
-            {objective.conventional.map((pointer) => (
-              <div className="flex gap-3 ">
+            {objective.conventional.map((pointer, idx) => (
+              <div key={idx} className="flex gap-3 ">
                 <span className="material-icons text-accent-1">play_arrow</span>
                 <p>
                   <span className="font-bold leading-tight">{pointer.heading}: </span>
@@ -95,7 +93,7 @@ export default function ObjectivePage() {
         <div>
           <Image src="/images/hero-image.png" priority width={600} height={600} alt="zakat hero" />
         </div>
-        <style jsx>{`
+        <style >{`
           .tab {
             width: 100%;
             padding: 0.5rem 1rem;
