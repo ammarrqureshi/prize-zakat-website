@@ -6,19 +6,39 @@ const Contact = () => {
     fullName: '',
     email: '',
     phone: '',
-    reason: '',
+    reason: 'hello there this is some thing good',
     missionUnderstanding: 'yes',
   });
-
+  const [status, setStatus] = useState('');
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus('Sending Response...');
     console.log('Form Data:', formData);
-    alert('Thank you for reaching out! We’ll get back to you soon.');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setStatus('Submission successful!');
+        alert('Thank you for contacting PRIZE. We will be in touch soon.');
+        setFormData({ fullName: '', email: '', phone: '', reason: '', missionUnderstanding: 'yes' });
+      } else {
+        alert('Submission failed. Please try again.!');
+        setStatus('Submission failed. Please try again.');
+      }
+    } catch (error) {
+      setStatus('Error occurred. Please try again.');
+      alert('Submission failed. Please try again.!');
+    }
   };
 
   return (
@@ -34,7 +54,11 @@ const Contact = () => {
           Interested in becoming a PRIZE volunteer? Fill out the form below, and we’ll get back to you!
         </p>
 
-        <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-6 rounded-lg bg-white p-6 shadow-lg">
+        <form
+          method="POST"
+          onSubmit={handleSubmit}
+          className="w-full max-w-lg space-y-6 rounded-lg bg-white p-6 shadow-lg"
+        >
           {/* Full Name */}
           <div>
             <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="fullName">
@@ -127,6 +151,11 @@ const Contact = () => {
             </button>
           </div>
         </form>
+        {status.length > 0 ? (
+          <div className=" fixed top-24 left-auto right-auto z-10 rounded-full bg-white px-6 py-4 shadow-xl ">
+            <h2>{status}</h2>
+          </div>
+        ) : null}
       </div>
     </>
   );
