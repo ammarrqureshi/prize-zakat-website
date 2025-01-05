@@ -53,7 +53,7 @@ export default function Testimonials() {
   }, [swiperRef, activeSlide]);
 
   return (
-    <div className="mb-28 max-sm:mb-48 ">
+    <div className="mb-28 max-sm:mb-36 ">
       <div className="relative mx-auto max-w-full px-4 lg:max-w-7xl">
         <div className="flex flex-wrap">
           <div className="w-full px-0 lg:w-5/12 lg:pl-8 lg:pr-20">

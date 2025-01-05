@@ -204,7 +204,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       {/* Section Easy in Fast */}
-      <div className="relative mb-28 grid  grid-cols-2 bg-accent-8 py-16 text-white">
+      <div className="relative mb-28 grid gap-4  bg-accent-8 py-16 text-white md:grid-cols-2">
         <div className="absolute -top-0 right-0  z-10 h-60 w-60 rounded-full bg-accent-1/60 blur-3xl"></div>
         <div className="relative mx-auto  overflow-hidden px-4">
           <div className="flex flex-wrap ">
@@ -221,7 +221,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center ">
+        <div className="flex items-center px-4">
           <ul className=" flex flex-wrap content-center gap-12">
             <li className="flex items-center gap-x-5">
               <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-accent-1">
