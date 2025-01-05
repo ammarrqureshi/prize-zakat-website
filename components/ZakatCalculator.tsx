@@ -58,7 +58,7 @@ const ZakatCalculator = () => {
         <meta name="description" content="Calculate your Zakat with ease using our Zakat Calculator." />
       </Head>
 
-      <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 py-8">
+      <div className="flex  flex-col items-center justify-center bg-gray-50 px-4 py-8 md:min-h-screen">
         <h1 className="mb-6 text-center font-serif text-4xl text-gray-800">Zakat Calculator</h1>
         <p className="mb-8 text-center text-gray-600">Calculate your Zakat based on your assets and liabilities.</p>
 
