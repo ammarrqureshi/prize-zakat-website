@@ -48,6 +48,11 @@ export default function Header() {
                 <p className="px-9 text-accent-1 hover:text-gray-600 md:text-gray-800">Resources</p>
               </Link>
             </li>
+             <li>
+              <Link href="/team">
+                <p className="px-9 text-accent-1 hover:text-gray-600 md:text-gray-800">Team</p>
+              </Link>
+            </li>
             <li>
               <Link href="/events">
                 <p className="px-9 text-accent-1 hover:text-gray-600 md:text-gray-800">Events</p>
