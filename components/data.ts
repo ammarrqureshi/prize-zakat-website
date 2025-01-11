@@ -1,3 +1,4 @@
+// Data for Objectives
 export const objectives = [
   {
     id: 1,
@@ -425,4 +426,48 @@ export const objectives = [
       },
     },
   },
+];
+
+//Data for Team
+export const experts = [
+  {
+    name: 'Dr. Sarah Johnson',
+    role: 'Lead Zakat Consultant',
+    image: '/images/sarah.jpg',
+    bio: 'Dr. Sarah is a renowned expert in Islamic finance with over 15 years of experience.',
+  },
+  {
+    name: 'Dr. Sarah Johnson',
+    role: 'Lead Zakat Consultant',
+    image: '/images/sarah.jpg',
+    bio: 'Dr. Sarah is a renowned expert in Islamic finance with over 15 years of experience.',
+  },
+  {
+    name: 'Dr. Sarah Johnson',
+    role: 'Lead Zakat Consultant',
+    image: '/images/sarah.jpg',
+    bio: 'Dr. Sarah is a renowned expert in Islamic finance with over 15 years of experience.',
+  },
+  {
+    name: 'Dr. Sarah Johnson',
+    role: 'Lead Zakat Consultant',
+    image: '/images/sarah.jpg',
+    bio: 'Dr. Sarah is a renowned expert in Islamic finance with over 15 years of experience.',
+  },
+  {
+    name: 'Ahmad Khan',
+    role: 'Financial Advisor',
+    image: '/images/ahmad.jpg',
+    bio: 'Ahmad specializes in optimizing personal financial strategies for Zakat compliance.',
+  },
+];
+export const teamMembers = [
+  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
+  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
+  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
+  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
+  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
+  { name: 'Omar Farooq', role: 'Developer', image: '/images/omar.jpg' },
+  { name: 'Fatima Ali', role: 'UI/UX Designer', image: '/images/fatima.jpg' },
+  { name: 'Ali Raza', role: 'Marketing Specialist', image: '/images/ali.jpg' },
 ];

@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Testimonials from 'components/Testimonials';
-
+import ExpertsSlider from 'components/ExpertsSlider';
 import ZakatCalculator from 'components/ZakatCalculator';
 import Header from 'components/Header';
 import VolunteerSection from 'components/VolunteerSection';
@@ -258,6 +258,7 @@ const Home: NextPage = () => {
           </ul>
         </div>
       </div>
+      <ExpertsSlider />
       {/* Section Testimonial */}
       <Testimonials />
       {/* Section Clients */}

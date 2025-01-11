@@ -1,31 +1,9 @@
 import type { NextPage } from 'next';
-
+import { experts, teamMembers } from 'components/data';
 import Head from 'next/head';
 
 import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
 const Team: NextPage = () => {
-  const experts = [
-    {
-      name: 'Dr. Sarah Johnson',
-      role: 'Lead Zakat Consultant',
-      image: '/images/sarah.jpg',
-      bio: 'Dr. Sarah is a renowned expert in Islamic finance with over 15 years of experience.',
-    },
-    {
-      name: 'Ahmad Khan',
-      role: 'Financial Advisor',
-      image: '/images/ahmad.jpg',
-      bio: 'Ahmad specializes in optimizing personal financial strategies for Zakat compliance.',
-    },
-  ];
-
-  const teamMembers = [
-    { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
-    { name: 'Omar Farooq', role: 'Developer', image: '/images/omar.jpg' },
-    { name: 'Fatima Ali', role: 'UI/UX Designer', image: '/images/fatima.jpg' },
-    { name: 'Ali Raza', role: 'Marketing Specialist', image: '/images/ali.jpg' },
-  ];
-
   return (
     <>
       <Head>
@@ -72,20 +50,15 @@ const Team: NextPage = () => {
           <h2 className="mb-6 text-2xl font-semibold ">The Rest of Our Team</h2>
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {teamMembers.map((member, index) => (
-
-<div
-  key={index}
-  className="z-10 flex flex-col items-center rounded-xl bg-white p-4 shadow-md transition-transform transition-shadow duration-200 hover:scale-105 hover:shadow-[0_4px_15px_rgba(72,103,225,0.5)]"
->
-  <img
-    src={member.image}
-    alt={member.name}
-    className="mb-3 h-24 w-24 rounded-full object-cover"
-  />
-  <h3 className="text-lg font-medium text-gray-800">{member.name}</h3>
-  <p className="text-sm text-gray-600">{member.role}</p>
-</div>
-           ))}
+              <div
+                key={index}
+                className="z-10 flex flex-col items-center rounded-xl bg-white p-4 shadow-md transition-transform transition-shadow duration-200 hover:scale-105 hover:shadow-[0_4px_15px_rgba(72,103,225,0.5)]"
+              >
+                <img src={member.image} alt={member.name} className="mb-3 h-24 w-24 rounded-full object-cover" />
+                <h3 className="text-lg font-medium text-gray-800">{member.name}</h3>
+                <p className="text-sm text-gray-600">{member.role}</p>
+              </div>
+            ))}
           </div>
         </section>
       </div>

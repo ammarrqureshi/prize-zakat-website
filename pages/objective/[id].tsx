@@ -37,7 +37,7 @@ export default function ObjectivePage() {
             <div className="mb-6 flex flex-col text-left">
               <h3 className=" font-serif text-2xl uppercase leading-tight ">Key Metrics</h3>
             </div>
-            <ul className="flex flex-col md:items-center  gap-6 md:flex-row md:justify-center ">
+            <ul className="flex flex-col gap-6  md:flex-row md:items-center md:justify-center ">
               <li className="flex items-center gap-x-5">
                 <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-accent-1">
                   <span className="material-icons text-white">co_present</span>

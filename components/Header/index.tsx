@@ -48,7 +48,7 @@ export default function Header() {
                 <p className="px-9 text-accent-1 hover:text-gray-600 md:text-gray-800">Resources</p>
               </Link>
             </li>
-             <li>
+            <li>
               <Link href="/team">
                 <p className="px-9 text-accent-1 hover:text-gray-600 md:text-gray-800">Team</p>
               </Link>
@@ -65,12 +65,6 @@ export default function Header() {
                 </p>
               </Link>
             </li>
-            {/*   <li> */}
-            {/*     <button className="relative px-9 text-accent-1 md:text-gray-800"> */}
-            {/*       EN */}
-            {/*       <span className="absolute ml-2 h-2 w-2 translate-y-1/2 rotate-45 transform border-b border-r border-gray-800"></span> */}
-            {/*     </button> */}
-            {/*   </li> */}
           </ul>
         </div>
       </div>

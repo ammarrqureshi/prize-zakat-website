@@ -58,11 +58,15 @@ const ZakatCalculator = () => {
         <meta name="description" content="Calculate your Zakat with ease using our Zakat Calculator." />
       </Head>
 
-      <div className="flex  flex-col items-center justify-center bg-gray-50 px-4 py-8 md:min-h-screen">
-        <h1 className="mb-6 text-center font-serif text-4xl text-gray-800">Zakat Calculator</h1>
-        <p className="mb-8 text-center text-gray-600">Calculate your Zakat based on your assets and liabilities.</p>
+      <div className="relative flex  flex-col items-center justify-center bg-accent-8 px-4 pb-8 pt-16 md:min-h-screen">
+        <div className="absolute -top-0 right-0  h-80 w-60 rounded-full bg-accent-1/60 blur-3xl"></div>
+        <h1 className="mb-6 text-center font-serif text-4xl text-white">Zakat Calculator</h1>
+        <p className="mb-8 text-center text-gray-200">Calculate your Zakat based on your assets and liabilities.</p>
 
-        <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-6 rounded-lg bg-white p-6 shadow-lg">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-lg space-y-6 rounded-lg bg-white p-6  shadow-[0_4px_15px_rgba(72,103,225,0.5)]"
+        >
           <div>
             <label className="mb-2 block text-sm font-medium text-gray-700" htmlFor="gold">
               Gold (in grams)
@@ -148,7 +152,7 @@ const ZakatCalculator = () => {
 
         {zakatAmount.grams !== null && zakatAmount.currency !== null && (
           <div className="mt-8 p-4 text-center">
-            <h2 className="text-xl font-bold text-gray-800">
+            <h2 className="text-xl font-bold text-gray-200">
               Zakat on Gold & Silver: {zakatAmount.grams > 0 ? `${zakatAmount.grams.toFixed(2)} grams` : 'No Zakat due'}{' '}
               <br />
               Zakat on Other Assets:{' '}
