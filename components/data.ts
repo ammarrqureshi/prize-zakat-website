@@ -471,3 +471,30 @@ export const teamMembers = [
   { name: 'Fatima Ali', role: 'UI/UX Designer', image: '/images/fatima.jpg' },
   { name: 'Ali Raza', role: 'Marketing Specialist', image: '/images/ali.jpg' },
 ];
+
+export const resources = [
+  {
+    title: 'Is Money Safe in Banks?',
+    thumbnail: '/images/resource-thumbnail-1.jpg',
+    icon: '/images/resource-2.png',
+    link: 'https://youtu.be/7kVOghAPfWw?si=HOlBgAZB1HnS-m3X',
+  },
+  {
+    title: 'Islamic Economy on TBT Podcast',
+    thumbnail: '/images/resource-thumbnail-2.jpg',
+    icon: '/images/resource-2.png',
+    link: 'https://youtu.be/KB7j1um5dE8?si=To20RzvJUpmIyfVh',
+  },
+  {
+    title: 'On EON Podcast',
+    thumbnail: '/images/resource-thumbnail-3.jpg',
+    icon: '/images/resource-2.png',
+    link: 'https://youtu.be/1fjhIw6KxZQ?si=l7l0GWZF6ewmUIpb',
+  },
+  {
+    title: 'Interest Free Pakistan?',
+    thumbnail: '/images/resource-thumbnail-3.jpg',
+    icon: '/images/resource-2.png',
+    link: 'https://www.youtube.com/watch?v=7st0IWVoFv0',
+  },
+];

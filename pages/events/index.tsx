@@ -7,15 +7,73 @@ import DecorHero from 'assets/images/decor-intersect-1.svg';
 const Events: NextPage = () => {
   const events = [
     {
-      title: 'The Special Guest Lecture',
-      date: '15 Nov 2025',
-      location: 'Ripah Insitute Of Public Policy, Ground Floor, 7-Evacuee Trust Complex, F-5/1, Islamabad ',
+      title: 'Full Reserve Banking',
+      date: '14 Nov 2024 , 6:30PM',
+      location: 'ICAP House Karachi',
+      img: '/images/event-1.jpeg',
       rsvp: '#',
     },
     {
-      title: 'The Special Guest Lecture',
-      date: '15 Nov 2025',
-      location: 'Ripah Insitute Of Public Policy, Ground Floor, 7-Evacuee Trust Complex, F-5/1, Islamabad ',
+title: '8th Int. Conference: Innovation and Stability',
+      date: '11 Nov 2024',
+      location: 'Center of Islamic Business and Finance ',
+      img: '/images/event-2.jpeg',
+      rsvp: '#',
+    },
+
+    {
+      title: 'Eliminate Inflation , Debt Interest Cost and Unemployment',
+      date: '08 Oct 2024, 10:30 AM',
+      location: 'SOE Seminar Hall',
+      img: '/images/event-3.jpeg',
+      rsvp: '#',
+    },
+
+    {
+      title: 'Breaking the Debt Cycle',
+      date: '21 Aug 2024, 11:00am',
+      location: 'AERC Conference Hall, University of Karachi',
+      img: '/images/event-5.jpeg',
+      rsvp: '#',
+    },
+
+    {
+      title: 'An Interest Free Full Reserve Banking',
+      date: '08 Aug 2024, 2:30 PM',
+      location: 'KACIEF,  Department of Banking and Finance',
+      img: '/images/event-6.jpeg',
+      rsvp: '#',
+    },
+
+    {
+      title: 'Move from Fractional Reserve Banking',
+      date: '07 Aug 2024 , 5:30pm',
+      location: 'First Floor,15-E , Rehmat Center, Blue Area Islamabad, 44000',
+      img: '/images/event-7.jpeg',
+      rsvp: '#',
+    },
+
+    {
+      title: 'Interest Free Economy',
+      date: '25 Jun 2024, 3:00 PM',
+      location: 'Jinnah Auditoriam, Islamabad',
+      img: '/images/event-8.jpeg',
+      rsvp: '#',
+    },
+
+    {
+      title: 'The Zakat Based Economy',
+      date: '24 Sep 2024, 5:30 PM',
+      location: 'ST 3, Block 13, Gulshan e Iqbal, Karachi',
+      img: '/images/event-16.jpeg',
+      rsvp: '#',
+    },
+
+    {
+      title: 'Seminar on Full Reserve Banking',
+      date: '02 Jan 2025, 12:00pm',
+      location: 'PMAS Arid Agriculture University , Rawalpindi',
+      img: '/images/event-17.jpeg',
       rsvp: '#',
     },
   ];
@@ -39,7 +97,7 @@ const Events: NextPage = () => {
                   className="cover w-full object-cover"
                   width={100}
                   height={100}
-                  src="/images/destination-1.jpg"
+                  src={event.img}
                   alt="event_thumbnail"
                 />
               </div>

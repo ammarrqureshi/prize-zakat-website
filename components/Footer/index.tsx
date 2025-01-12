@@ -7,6 +7,21 @@ import FacebookIco from 'assets/images/facebook.svg';
 import InstagramIco from 'assets/images/instagram.svg';
 import TwitterIco from 'assets/images/twitter.svg';
 export default function Footer() {
+  const quickLinks = [
+    { title: 'PRIME Podcast', link: 'https://youtu.be/ldBTItZDpMg?si=z305BFly9M8UzRJp' },
+    {
+      title: 'Islamabad Post Story',
+      link: 'https://islamabadpost.com.pk/full-reserve-banking-proposed-to-resolve-pakistans-huge-debt-servicing-problem/',
+    },
+    {
+      title: 'Pro Pakistani Post',
+      link: 'https://propakistani.pk/2024/02/15/this-banking-model-can-eliminate-inflation-debt-and-interest-costs-from-pakistan/',
+    },
+    {
+      title: 'Express Tribune Story',
+      link: 'https://tribune.com.pk/story/2497984/us-central-bank-cuts-interest-rate-amid-recession-fears',
+    },
+  ];
   return (
     <footer className="relative mt-28 overflow-x-hidden pb-32">
       <div className="h-6- bg-accent-6.20 absolute -bottom-0 -right-10 z-10 w-60 rounded-full blur-3xl"></div>
@@ -45,23 +60,15 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <h6 className="mt-2 mb-6 text-xl font-semibold tracking-tight text-gray-900">Recent Updates</h6>
+                <h6 className="mt-2 mb-6 text-xl font-semibold tracking-tight text-gray-900">Quick Links</h6>
                 <ul className="space-y-2 text-lg text-gray-500">
-                  <li>
-                    <Link href="">
-                      <p>Building a Sustainable future</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <p>The Dangers of Interest</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <p>The Power of Zakat</p>
-                    </Link>
-                  </li>
+                  {quickLinks.map((quickLink) => (
+                    <li>
+                      <Link href={quickLink.link}>
+                        <p>{quickLink.title}</p>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

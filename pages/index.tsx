@@ -12,29 +12,8 @@ import DecorHero from 'assets/images/decor-intersect-1.svg';
 import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
 import DecorPlus1 from 'assets/images/decor-plus-style-1.svg';
 import DecorSwirl1 from 'assets/images/decor-swirl-style-1.svg';
-import { objectives } from 'components/data';
+import { objectives, resources } from 'components/data';
 const Home: NextPage = () => {
-  const resources = [
-    {
-      title: 'Is Money Safe in Banks?',
-      thumbnail: '/images/resource-thumbnail-1.jpg',
-      icon: '/images/resource-1.png',
-      link: 'https://youtu.be/7kVOghAPfWw?si=HOlBgAZB1HnS-m3X',
-    },
-    {
-      title: 'Islamic Economy on TBT Podcast',
-      thumbnail: '/images/resource-thumbnail-2.jpg',
-      icon: '/images/resource-2.png',
-      link: 'https://youtu.be/KB7j1um5dE8?si=To20RzvJUpmIyfVh',
-    },
-    {
-      title: 'On EON Podcast',
-      thumbnail: '/images/resource-thumbnail-3.jpg',
-      icon: '/images/resource-3.png',
-      link: 'https://youtu.be/1fjhIw6KxZQ?si=l7l0GWZF6ewmUIpb',
-    },
-  ];
-
   return (
     <div>
       <Head>
@@ -150,7 +129,7 @@ const Home: NextPage = () => {
             <div className="absolute bottom-10 right-0 h-[252px] w-full md:w-[96px] ">
               <DecorSwirl1 className="stroke-gray-600" />
             </div>
-            {resources.map((resource, idx) => (
+            {resources.slice(0, 3).map((resource, idx) => (
               <Link key={idx} href={resource.link}>
                 {' '}
                 <div

@@ -44,7 +44,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/#resources">
+              <Link href="/resources">
                 <p className="px-9 text-accent-1 hover:text-gray-600 md:text-gray-800">Resources</p>
               </Link>
             </li>
