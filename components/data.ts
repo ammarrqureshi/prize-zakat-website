@@ -493,7 +493,7 @@ export const resources = [
   },
   {
     title: 'Interest Free Pakistan?',
-    thumbnail: '/images/resource-thumbnail-3.jpg',
+    thumbnail: '/images/resource-thumbnail-4.jpg',
     icon: '/images/resource-2.png',
     link: 'https://www.youtube.com/watch?v=7st0IWVoFv0',
   },
