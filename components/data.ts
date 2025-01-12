@@ -498,3 +498,42 @@ export const resources = [
     link: 'https://www.youtube.com/watch?v=7st0IWVoFv0',
   },
 ];
+
+export const articles = [
+  {
+    title: 'Full reserve banking proposed to resolve Pakistan’s huge debt servicing problem',
+    thumbnail: '/images/islamabadpost.jpeg',
+    site: 'Islamabad Post',
+    link: 'https://islamabadpost.com.pk/full-reserve-banking-proposed-to-resolve-pakistans-huge-debt-servicing-problem/',
+  },
+  {
+    title: 'This Banking Model Can Eliminate Inflation, Debt, and Interest Costs from Pakistan',
+    thumbnail: '/images/propakistani.png',
+    site: 'Pro Pakistani',
+    link: 'https://propakistani.pk/2024/02/15/this-banking-model-can-eliminate-inflation-debt-and-interest-costs-from-pakistan/',
+  },
+  {
+    title: 'Jang News Article about Debt and Interest Free Pakistan',
+    thumbnail: '/images/jangnews.png',
+    site: 'Jang News',
+    link: 'https://jang.com.pk/news/1358967',
+  },
+  {
+    title: 'US central bank cuts interest rate amid recession fears',
+    thumbnail: '/images/tribune-logo.webp',
+    site: 'Express Tribune',
+    link: 'https://tribune.com.pk/story/2497984/us-central-bank-cuts-interest-rate-amid-recession-fears',
+  },
+  {
+    title: 'Full reserve banking: Part – I',
+    thumbnail: '/images/Thenews-logo.svg',
+    site: 'The News',
+    link: 'https://www.thenews.com.pk/writer/qanit-khalilullah',
+  },
+  {
+    title: 'Inaugural meeting of IPS’ Working Group on Full Reserve Banking',
+    thumbnail: '/images/ips-logo.png',
+    site: 'IPS',
+    link: 'https://www.ips.org.pk/inaugural-meeting-of-ips-working-group-on-full-reserve-banking/',
+  },
+];

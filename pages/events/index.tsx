@@ -14,7 +14,7 @@ const Events: NextPage = () => {
       rsvp: '#',
     },
     {
-title: '8th Int. Conference: Innovation and Stability',
+      title: '8th Int. Conference: Innovation and Stability',
       date: '11 Nov 2024',
       location: 'Center of Islamic Business and Finance ',
       img: '/images/event-2.jpeg',
