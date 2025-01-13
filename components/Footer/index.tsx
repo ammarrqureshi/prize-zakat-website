@@ -62,8 +62,8 @@ export default function Footer() {
               <div>
                 <h6 className="mt-2 mb-6 text-xl font-semibold tracking-tight text-gray-900">Quick Links</h6>
                 <ul className="space-y-2 text-lg text-gray-500">
-                  {quickLinks.map((quickLink) => (
-                    <li>
+                  {quickLinks.map((quickLink, idx) => (
+                    <li key={idx}>
                       <Link href={quickLink.link}>
                         <p>{quickLink.title}</p>
                       </Link>

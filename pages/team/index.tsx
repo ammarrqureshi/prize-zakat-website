@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { experts, teamMembers } from 'components/data';
 import Head from 'next/head';
 
+import Image from 'next/image';
 import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
 const Team: NextPage = () => {
   return (
@@ -31,9 +32,11 @@ const Team: NextPage = () => {
           <div className="grid gap-6 md:grid-cols-3">
             {experts.map((expert, index) => (
               <div key={index} className="rounded-xl bg-white p-6 shadow-2xl transition-shadow hover:shadow-xl">
-                <img
+                <Image
                   src={expert.image}
                   alt={expert.name}
+                  width={100}
+                  height={100}
                   className="mx-auto mb-4 h-40 w-40 rounded-full object-cover"
                 />
                 <h3 className="text-xl font-bold text-gray-800">{expert.name}</h3>
@@ -54,7 +57,13 @@ const Team: NextPage = () => {
                 key={index}
                 className="z-10 flex flex-col items-center rounded-xl bg-white p-4 shadow-md transition-transform transition-shadow duration-200 hover:scale-105 hover:shadow-[0_4px_15px_rgba(72,103,225,0.5)]"
               >
-                <img src={member.image} alt={member.name} className="mb-3 h-24 w-24 rounded-full object-cover" />
+                <Image
+                  width={100}
+                  height={100}
+                  src={member.image}
+                  alt={member.name}
+                  className="mb-3 h-24 w-24 rounded-full object-cover"
+                />
                 <h3 className="text-lg font-medium text-gray-800">{member.name}</h3>
                 <p className="text-sm text-gray-600">{member.role}</p>
               </div>

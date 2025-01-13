@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import { experts } from 'components/data';
@@ -32,7 +33,13 @@ const ExpertsSlider = () => {
             {experts.map((expert, index) => (
               <SwiperSlide key={index}>
                 <div className="min-h-80 flex max-h-80 flex-col items-center rounded-2xl bg-white p-6 shadow-lg">
-                  <img src={expert.image} alt={expert.name} className="mb-4 h-32 w-32 rounded-full object-cover" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src={expert.image}
+                    alt={expert.name}
+                    className="mb-4 h-32 w-32 rounded-full object-cover"
+                  />
                   <h3 className="text-xl font-bold text-gray-800">{expert.name}</h3>
                   <p className="text-sm text-blue-600">{expert.role}</p>
                   <p className="mt-4 text-center text-gray-600">{expert.bio}</p>
