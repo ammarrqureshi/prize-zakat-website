@@ -180,6 +180,16 @@ const Home: NextPage = () => {
               </Link>
             ))}
           </div>
+          <div className="mt-8 flex items-center justify-center text-center">
+            <Link href="/team">
+              <div className=" flex items-center justify-center gap-4 rounded-xl  px-4 py-2 text-accent-1 shadow-[0-25-35px] md:mr-11 md:px-6  md:py-4 ">
+                <span className="flex items-center justify-center rounded-full bg-accent-1 p-6 text-white">
+                  <span className="material-icons">arrow_forward</span>
+                </span>
+               Go to Resources 
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
       {/* Section Easy in Fast */}
