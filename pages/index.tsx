@@ -42,7 +42,9 @@ const Home: NextPage = () => {
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex">
             <div className="w-full max-sm:pt-44 md:pt-52 lg:w-6/12">
-              <h1 className="mb-6 text-sm font-bold uppercase text-accent-2 lg:text-xl">Policy Institute for</h1>
+              <h1 className="mb-6 text-sm font-bold uppercase text-accent-2 lg:text-xl">
+                Policy and Research Institute for
+              </h1>
               <h2 className="mb-8 font-serif text-4xl leading-tight tracking-tighter text-gray-900 lg:text-[84px] lg:leading-[89px]">
                 Zakat And{' '}
                 <span className="relative">
