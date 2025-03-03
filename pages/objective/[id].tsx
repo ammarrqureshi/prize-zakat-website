@@ -24,7 +24,47 @@ export default function ObjectivePage() {
     { name: 'Tab1', label: 'Islamic Banking' },
     { name: 'Tab2', label: 'Conventional Reserve Banking' },
   ];
-
+  // @ts-ignore
+  const KeyMetrics = ({ povertyRate, wealthDistro, economyGrowth }) => {
+    return (
+      <div className="relative mb-4 rounded-xl  bg-accent-8 py-8 text-white">
+        <div className="absolute -top-0 right-0  z-10 h-60 w-60 rounded-full bg-accent-1/60 blur-3xl"></div>
+        <div className="relative mx-auto  overflow-hidden px-4">
+          <div className="flex w-full flex-col items-center justify-center  pl-0 lg:pl-6">
+            <div className="mb-6 flex flex-col text-left">
+              <h3 className=" font-serif text-2xl uppercase leading-tight ">Key Metrics</h3>
+            </div>
+            <ul className="flex flex-col gap-6  md:flex-row md:items-center md:justify-center ">
+              <li className="flex items-center gap-x-5">
+                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-accent-1">
+                  <span className="material-icons text-white">co_present</span>
+                </span>
+                <div className="flex flex-col leading-5">
+                  <h6 className=" text-lg font-normal ">{povertyRate} Less Poverty </h6>
+                </div>
+              </li>
+              <li className="flex  items-center gap-x-5">
+                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-accent-2">
+                  <span className="material-icons text-white">hail</span>
+                </span>
+                <div className="flex flex-col leading-5">
+                  <h6 className=" text-lg font-normal ">{wealthDistro} Wealth Distribution</h6>
+                </div>
+              </li>
+              <li className="flex items-center gap-x-5">
+                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-accent-7">
+                  <span className="material-icons text-white">diversity_3</span>
+                </span>
+                <div className="flex flex-col leading-5">
+                  <h6 className=" text-lg font-normal ">{economyGrowth} Economy Growth</h6>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  };
   return (
     <div className="relative flex">
       {/* Main Content */}
@@ -62,6 +102,11 @@ export default function ObjectivePage() {
                     </p>
                   </div>
                 ))}
+                <KeyMetrics
+                  povertyRate={objective.islamic.metrics.povertyRate}
+                  wealthDistro={objective.islamic.metrics.wealthDistro}
+                  economyGrowth={objective.islamic.metrics.economyGrowth}
+                />
               </div>
             ) : (
               <div className="flex flex-col gap-6">
@@ -74,6 +119,11 @@ export default function ObjectivePage() {
                     </p>
                   </div>
                 ))}
+                <KeyMetrics
+                  povertyRate={objective.conventional.metrics.povertyRate}
+                  wealthDistro={objective.conventional.metrics.wealthDistro}
+                  economyGrowth={objective.conventional.metrics.economyGrowth}
+                />
               </div>
             )}
           </div>
@@ -81,7 +131,7 @@ export default function ObjectivePage() {
         <VolunteerSection />
       </main>
       {/* Floating Sidebar Navigation */}
-      <div className="fixed top-1/4 right-4 z-50 hidden rounded-lg border border-gray-300 bg-white p-4 shadow-lg md:block">
+      <div className="fixed top-1/4 right-4 z-50 hidden rounded-lg border border-gray-300 bg-white p-4 shadow-lg lg:block">
         <h3 className="mb-2 text-lg font-semibold">Objectives</h3>
         <ul className="space-y-2 text-gray-400 ">
           {objectives.map((obj, index) => (
@@ -101,10 +151,11 @@ export default function ObjectivePage() {
 
       {/* Mobile Sidebar Toggle Button */}
       <button
-        className="fixed bottom-6 right-6 z-50 rounded-full bg-blue-500 p-3 text-white shadow-lg md:hidden"
+        className="fixed bottom-6 right-6 z-50 rounded-full bg-blue-500 p-3 text-white shadow-lg lg:hidden"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
-        {isSidebarOpen ? '✖' : '☰'}
+        {isSidebarOpen ? '✖ ' : '☰ '}
+        {objective.heading}
       </button>
 
       {/* Mobile Sidebar */}
