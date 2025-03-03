@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import classNames from 'classnames';
 
 import Image from 'next/image';
@@ -7,13 +8,14 @@ import Logo from 'assets/images/logo.png';
 
 export default function Header() {
   const [menu, setMenu] = useState(false);
+  const router = useRouter(); // Get current route
 
   const toggleMenu = useCallback(() => {
     setMenu((prev) => !prev);
   }, [setMenu]);
 
   return (
-    <header className="mx-auto max-w-full  px-4 md:max-w-7xl">
+    <header className="mx-auto max-w-full px-4 md:max-w-7xl">
       <div className="flex items-center justify-between">
         <Link href="/">
           <div className="w-28">
@@ -23,7 +25,7 @@ export default function Header() {
         <button
           type="button"
           onClick={toggleMenu}
-          className={classNames('no-wrap z-50 flex  appearance-none items-center justify-center p-2 md:hidden', {
+          className={classNames('no-wrap z-50 flex appearance-none items-center justify-center p-2 md:hidden', {
             'fixed right-4 text-white': menu,
             'relative text-inherit': !menu,
           })}
@@ -38,6 +40,14 @@ export default function Header() {
           })}
         >
           <ul className="flex flex-col items-center gap-y-6 md:flex-row md:gap-y-0">
+            {/* Conditionally show Home link */}
+            {router.pathname !== '/' && (
+              <li>
+                <Link href="/">
+                  <p className="px-9 text-accent-1 hover:text-gray-600 md:text-gray-800">Home</p>
+                </Link>
+              </li>
+            )}
             <li>
               <Link href="/about">
                 <p className="px-9 text-accent-1 hover:text-gray-600 md:text-gray-800">About</p>

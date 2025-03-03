@@ -13,6 +13,7 @@ import DecorTextUnderlineHero from 'assets/images/text-decor-hero.svg';
 import DecorPlus1 from 'assets/images/decor-plus-style-1.svg';
 import DecorSwirl1 from 'assets/images/decor-swirl-style-1.svg';
 import { objectives, resources } from 'components/data';
+import ProblemsWeSolve from 'components/ProblemsWeSolve';
 const Home: NextPage = () => {
   return (
     <div>
@@ -41,16 +42,16 @@ const Home: NextPage = () => {
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex">
             <div className="w-full max-sm:pt-44 md:pt-52 lg:w-6/12">
-              <h1 className="mb-6 text-sm font-bold uppercase text-accent-2 lg:text-xl">Economy that can save you</h1>
+              <h1 className="mb-6 text-sm font-bold uppercase text-accent-2 lg:text-xl">Policy Institute for</h1>
               <h2 className="mb-8 font-serif text-4xl leading-tight tracking-tighter text-gray-900 lg:text-[84px] lg:leading-[89px]">
-                Zakat,{' '}
+                Zakat And{' '}
                 <span className="relative">
-                  economy
+                  Ribba{' '}
                   <span className="absolute top-full left-0 -z-10 -mt-3 -ml-4 lg:-mt-8">
                     <DecorTextUnderlineHero className="h-1 w-[100px] fill-accent-4 lg:h-[12px] lg:w-[393px]" />
                   </span>
                 </span>
-                <p>for the society</p>
+                <p>Free Economy</p>
               </h2>
               <p className="mb-8 max-w-lg text-sm leading-6 text-gray-500 lg:text-base lg:leading-8">
                 Establishing a society and economy based on Islamic Principles of Justice, Equity and Compassion{' '}
@@ -77,6 +78,8 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
+
+      <ProblemsWeSolve />
       {/* Section Category */}
       <section className="mb-32">
         <div className="relative mx-auto max-w-7xl px-4">
@@ -84,8 +87,8 @@ const Home: NextPage = () => {
             <DecorPlus1 className="decor-plus-style-1" />
           </div>
           <div className="mb-16 flex flex-col text-center">
-            <h3 className="font-serif text-4xl uppercase leading-tight text-gray-900 lg:text-5xl lg:leading-snug">
-              Our Focus
+            <h3 className="font-serif text-4xl leading-tight text-gray-900 lg:text-5xl lg:leading-snug">
+              Here{"'"}s Ribba Free <span className="text-accent-2">Zakat Economy!</span>{' '}
             </h3>
           </div>
           <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-16 text-gray-900">
@@ -105,6 +108,10 @@ const Home: NextPage = () => {
                       <div>
                         <h4 className="mb-3 text-xl font-semibold text-accent-8">{objective.heading}</h4>
                         <h5 className="font-regular mb-8 px-0 text-sm text-gray-500 lg:px-8">{objective.text}</h5>
+
+                        <span className="material-icons rounded-full bg-accent-1 p-2 text-white hover:scale-110">
+                          chevron_right
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -186,7 +193,7 @@ const Home: NextPage = () => {
                 <span className="flex items-center justify-center rounded-full bg-accent-1 p-6 text-white">
                   <span className="material-icons">arrow_forward</span>
                 </span>
-               Go to Resources 
+                Go to Resources
               </div>
             </Link>
           </div>
