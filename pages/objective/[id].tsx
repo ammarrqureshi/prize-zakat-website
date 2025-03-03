@@ -3,21 +3,19 @@ import { useState } from 'react';
 import { objectives } from 'components/data';
 import VolunteerSection from 'components/VolunteerSection';
 import DecorHero from 'assets/images/decor-intersect-1.svg';
-
 export default function ObjectivePage() {
   const [activeTab, setActiveTab] = useState('Tab1');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Sidebar toggle state
   const router = useRouter();
   const { id } = router.query;
 
-  if (!id) return <p>Loading...</p>;
+  if (!id || Array.isArray(id) || isNaN(Number(id))) {
+    return <h1>Objective Not Found</h1>;
+  }
 
-  const objective = objectives[id - 1];
-
-  if (!objective) return <h1>Objective Not Found</h1>;
-
+  const objective = objectives[Number(id) - 1];
   // Handle navigation between objectives
-  const handleNavigate = (objectiveId) => {
+  const handleNavigate = (objectiveId: any) => {
     router.push(`/objective/${objectiveId}`);
     setIsSidebarOpen(false); // Close sidebar on selection (for mobile)
   };
@@ -82,7 +80,6 @@ export default function ObjectivePage() {
         </div>
         <VolunteerSection />
       </main>
-
       {/* Floating Sidebar Navigation */}
       <div className="fixed top-1/4 right-4 z-50 hidden rounded-lg border border-gray-300 bg-white p-4 shadow-lg md:block">
         <h3 className="mb-2 text-lg font-semibold">Objectives</h3>
@@ -91,7 +88,7 @@ export default function ObjectivePage() {
             <li key={index}>
               <button
                 className={`w-full rounded-md p-2 text-left ${
-                  obj.id == id ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'
+                  obj.id == Number(id) ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'
                 }`}
                 onClick={() => handleNavigate(obj.id)}
               >
@@ -125,7 +122,7 @@ export default function ObjectivePage() {
             <li key={index}>
               <button
                 className={`w-full rounded-md p-2 text-left  ${
-                  obj.id == id ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'
+                  obj.id == Number(id) ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'
                 }`}
                 onClick={() => handleNavigate(obj.id)}
               >
