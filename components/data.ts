@@ -431,45 +431,40 @@ export const objectives = [
 //Data for Team
 export const experts = [
   {
-    name: 'Dr. Sarah Johnson',
-    role: 'Lead Zakat Consultant',
+    name: 'Mr. Qanit Khalil Ullah',
+    role: 'Head PRIZE',
     image: '/images/sarah.jpg',
-    bio: 'Dr. Sarah is a renowned expert in Islamic finance with over 15 years of experience.',
+    bio: 'Dr. Qanit is a renowned expert in Islamic finance with over 15 years of experience.',
   },
   {
-    name: 'Dr. Sarah Johnson',
-    role: 'Lead Zakat Consultant',
+    name: 'Mr. Adnan Abdullah',
+    role: 'Fellow Researcher',
     image: '/images/sarah.jpg',
-    bio: 'Dr. Sarah is a renowned expert in Islamic finance with over 15 years of experience.',
+    bio: 'Dr. Adnan is a renowned expert in Islamic finance with over 15 years of experience.',
   },
   {
-    name: 'Dr. Sarah Johnson',
-    role: 'Lead Zakat Consultant',
+    name: 'Mr. Humair',
+    role: 'Fellow Researcher',
     image: '/images/sarah.jpg',
-    bio: 'Dr. Sarah is a renowned expert in Islamic finance with over 15 years of experience.',
+    bio: 'Dr. Humair is a renowned expert in Islamic finance with over 15 years of experience.',
   },
   {
-    name: 'Dr. Sarah Johnson',
-    role: 'Lead Zakat Consultant',
+    name: 'Dr. Anwar Shah',
+    role: 'Head Board of Researchers',
     image: '/images/sarah.jpg',
-    bio: 'Dr. Sarah is a renowned expert in Islamic finance with over 15 years of experience.',
+    bio: 'Dr. Anwar is a renowned expert in Islamic finance with over 15 years of experience.',
   },
   {
-    name: 'Ahmad Khan',
-    role: 'Financial Advisor',
+    name: 'Mr. Haris Abdullah',
+    role: 'Research Scholar',
     image: '/images/ahmad.jpg',
-    bio: 'Ahmad specializes in optimizing personal financial strategies for Zakat compliance.',
+    bio: 'Haris specializes in optimizing personal financial strategies for Zakat compliance.',
   },
 ];
 export const teamMembers = [
-  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
-  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
-  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
-  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
-  { name: 'Aisha Malik', role: 'Content Strategist', image: '/images/aisha.jpg' },
-  { name: 'Omar Farooq', role: 'Developer', image: '/images/omar.jpg' },
-  { name: 'Fatima Ali', role: 'UI/UX Designer', image: '/images/fatima.jpg' },
-  { name: 'Ali Raza', role: 'Marketing Specialist', image: '/images/ali.jpg' },
+  { name: 'Mr. Khaleeq Ahmed', role: 'Board Member', image: '/images/aisha.jpg' },
+  { name: 'Mr. Syed Mansoor', role: 'Board Member', image: '/images/aisha.jpg' },
+  { name: 'Mr. Rafiq Tahir', role: 'Board Member', image: '/images/aisha.jpg' },
 ];
 
 export const resources = [

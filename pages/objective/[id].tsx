@@ -70,85 +70,85 @@ export default function ObjectivePage() {
       {/* Main Content */}
       <main className="w-full p-6">
         <h2 className="mb-8 font-serif text-4xl leading-tight tracking-tighter text-gray-900">{objective.heading}</h2>
-
-        <div className="relative mx-auto mb-36 gap-8 rounded-xl bg-white px-6 py-6 shadow-xl md:w-7/12">
-          <span className="absolute right-0 top-0 bottom-0 -z-10 h-screen w-5/12">
-            <DecorHero className="fill-accent-3/30" />
-          </span>
-
-          {/* Tab Navigation */}
-          <div className="tabs flex items-center justify-center rounded-2xl shadow-2xl">
-            {tabs.map((tab) => (
-              <button
-                key={tab.name}
-                className={`tab rounded-2xl ${activeTab === tab.name ? 'active' : ''}`}
-                onClick={() => setActiveTab(tab.name)}
-              >
-                {tab.label}
-              </button>
-            ))}
+        <div className="mb-28 flex gap-4">
+          {/* Floating Sidebar Navigation */}
+          <div className="hidden self-start rounded-lg border border-gray-300 bg-white p-4 shadow-lg lg:block">
+            <h3 className="mb-2 text-lg font-semibold">Objectives</h3>
+            <ul className="space-y-2 text-gray-400 ">
+              {objectives.map((obj, index) => (
+                <li key={index}>
+                  <button
+                    className={`w-full rounded-md p-2 text-left ${
+                      obj.id == Number(id) ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'
+                    }`}
+                    onClick={() => handleNavigate(obj.id)}
+                  >
+                    {obj.heading}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
+          <div className="relative mx-auto mb-36 gap-8 rounded-xl bg-white px-6 py-6 shadow-xl md:w-7/12">
+            <span className="absolute right-0 top-0 bottom-0 -z-10 h-screen w-5/12">
+              <DecorHero className="fill-accent-3/30" />
+            </span>
 
-          {/* Tab Content */}
-          <div className="tab-content mt-4">
-            {activeTab === 'Tab1' ? (
-              <div className="flex flex-col gap-6">
-                {objective.islamic.pointers.map((pointer, idx) => (
-                  <div key={idx} className="flex gap-3">
-                    <span className="material-icons text-green-400">done</span>
-                    <p>
-                      <span className="font-bold">{pointer.heading}: </span>
-                      {pointer.desc}
-                    </p>
-                  </div>
-                ))}
-                <KeyMetrics
-                  povertyRate={objective.islamic.metrics.povertyRate}
-                  wealthDistro={objective.islamic.metrics.wealthDistro}
-                  economyGrowth={objective.islamic.metrics.economyGrowth}
-                />
-              </div>
-            ) : (
-              <div className="flex flex-col gap-6">
-                {objective.conventional.pointers.map((pointer, idx) => (
-                  <div key={idx} className="flex gap-3">
-                    <span className="material-icons text-red-400">close</span>
-                    <p>
-                      <span className="font-bold">{pointer.heading}: </span>
-                      {pointer.desc}
-                    </p>
-                  </div>
-                ))}
-                <KeyMetrics
-                  povertyRate={objective.conventional.metrics.povertyRate}
-                  wealthDistro={objective.conventional.metrics.wealthDistro}
-                  economyGrowth={objective.conventional.metrics.economyGrowth}
-                />
-              </div>
-            )}
+            {/* Tab Navigation */}
+            <div className="tabs flex items-center justify-center rounded-2xl shadow-2xl">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.name}
+                  className={`tab rounded-2xl ${activeTab === tab.name ? 'active' : ''}`}
+                  onClick={() => setActiveTab(tab.name)}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Tab Content */}
+            <div className="tab-content mt-4">
+              {activeTab === 'Tab1' ? (
+                <div className="flex flex-col gap-6">
+                  {objective.islamic.pointers.map((pointer, idx) => (
+                    <div key={idx} className="flex gap-3">
+                      <span className="material-icons text-green-400">done</span>
+                      <p>
+                        <span className="font-bold">{pointer.heading}: </span>
+                        {pointer.desc}
+                      </p>
+                    </div>
+                  ))}
+                  <KeyMetrics
+                    povertyRate={objective.islamic.metrics.povertyRate}
+                    wealthDistro={objective.islamic.metrics.wealthDistro}
+                    economyGrowth={objective.islamic.metrics.economyGrowth}
+                  />
+                </div>
+              ) : (
+                <div className="flex flex-col gap-6">
+                  {objective.conventional.pointers.map((pointer, idx) => (
+                    <div key={idx} className="flex gap-3">
+                      <span className="material-icons text-red-400">close</span>
+                      <p>
+                        <span className="font-bold">{pointer.heading}: </span>
+                        {pointer.desc}
+                      </p>
+                    </div>
+                  ))}
+                  <KeyMetrics
+                    povertyRate={objective.conventional.metrics.povertyRate}
+                    wealthDistro={objective.conventional.metrics.wealthDistro}
+                    economyGrowth={objective.conventional.metrics.economyGrowth}
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
         <VolunteerSection />
       </main>
-      {/* Floating Sidebar Navigation */}
-      <div className="fixed top-1/4 right-4 z-50 hidden rounded-lg border border-gray-300 bg-white p-4 shadow-lg lg:block">
-        <h3 className="mb-2 text-lg font-semibold">Objectives</h3>
-        <ul className="space-y-2 text-gray-400 ">
-          {objectives.map((obj, index) => (
-            <li key={index}>
-              <button
-                className={`w-full rounded-md p-2 text-left ${
-                  obj.id == Number(id) ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'
-                }`}
-                onClick={() => handleNavigate(obj.id)}
-              >
-                {obj.heading}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-
       {/* Mobile Sidebar Toggle Button */}
       <button
         className="fixed bottom-6 right-6 z-50 rounded-full bg-blue-500 p-3 text-white shadow-lg lg:hidden"
